@@ -1,0 +1,140 @@
+/* 0. VARS */
+/* LAYOUT */
+/* COLORS */
+/* OPTIONS */
+
+/* 1. Layout */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover, a:focus, a:visited {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    display: inline-block;
+}
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    max-width: 100%;
+    background: white;
+    color: #2F313A;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;/* -webkit-font-smoothing: antialiased *//* -moz-osx-font-smoothing: grayscale */
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 1200px;
+}
+
+/* 2. Elements */
+/* ICONS */
+.ico {
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: ' ';
+    vertical-align: middle;
+    font-style: normal;
+}
+/* buttons */
+button {}
+button:focus {
+    outline: none;
+}
+.btn {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.btn:focus, .btn:active {
+    outline: none;
+}
+
+/* 3. Modules */
+/* INDEX PAGE */
+.e-calc {
+    min-height: 100vh;
+    background: #F8F8F8;
+}
+.e-calc__heading {}
+.e-calc__heading--huge {
+    padding-top: 70px;
+    font-weight: 300;
+    font-size: 35px;
+}
+.e-calc__postcode {
+    margin-top: 25px;
+}
+.e-calc__input {
+    border: 4px solid #E2E2E2;
+    border-radius: 4px;
+    background: white;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.e-calc__input.focused {
+    border-color: #3179C5;
+}
+.e-calc__input--postcode {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
+    height: 60px;
+}
+.e-calc__input--postcode label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 2;
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.55);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.e-calc__input--postcode input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px 20px 15px 140px;
+    border: 0;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.55);
+    text-align: left;
+    font-size: 18px;
+    -webkit-apperance: none;
+}
+/* global helpers */
+.text-center {
+    text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

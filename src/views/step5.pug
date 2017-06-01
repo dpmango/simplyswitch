@@ -1,0 +1,21 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .e-calc
+      .container.text-center
+        .e-calc__heading.e-calc__heading--huge 
+          span Application complete!
+          span Thank you for using Simply Switch to switch your energy supplier!
+  
+        .e-calc__thanks
+          p Your transfer is now under way. Please make sure that you check with your current provider(s) that your account balances are up to date, otherwise this could cause delay to your application. If you are currently paying by Direct Debit we would recommend that you do not cancel any existing Direct Debits until such time as you know the date of the transfer.
+          p Our goal is simple, to give you the power of choice and to help you make informed decisions. If you have any feedback, big or small, please email our <a href='#'>Customer Services department</a>.
+          p EDF Energy will email you your contract pack <span>within 3 working days</span>. If you have chosen to pay by Direct Debit this will also include confirmation of your Direct Debit Instruction.
+          
+    include shared/footer.pug

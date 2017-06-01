@@ -67,8 +67,10 @@ doctype html
             .e-calc__small-label My adress is:
             .e-calc__options__confirmation__selection.js-eCalcSelectedAdress 49, ELM WALK, LONDON, SW20 9EE
         
-          a(href='#').e-calc__btn.e-calc__btn--primary.js-toggleStep Correct! Continue
+          a(href='step2.html').e-calc__btn.e-calc__btn--primary.js-toggleStep Correct! Continue
           a(href='#').e-calc__options__confirmation__back.js-eCalcWrongPostcode 
             span Whhops, this is wrong adress!
-            
+      
+      include shared/steps.pug
+          
     include shared/footer.pug

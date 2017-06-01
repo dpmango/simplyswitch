@@ -17,7 +17,7 @@
 
 // COMPONENTS LEVEL
 .e-calc
-
+  position: relative
   &__postcode
     margin-top: 25px
 
@@ -149,6 +149,56 @@
           border-bottom: 1px dashed $borderColor
 
 
+  &__steps
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    &__box
+      position: relative
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        right: -1px
+        top: 10px
+        bottom: 10px
+        background: $borderColor
+        width: 1px
+
+  &__step
+    position: relative
+    margin-bottom: 40px
+    padding: 10px
+    padding-right: 20px
+    font-size: 10px
+    color: $black50
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    text-align: right
+    &:last-child
+      margin-bottom: 0
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      z-index: 3
+      right: -6px
+      top: 50%
+      transform: translateY(-50%)
+      size: 11px
+      background: $borderColor
+      border-radius: 50%
+      transition: all $transitionSpeed $ease
+    &.active
+      color: $fontColor
+      font-weight: 600
+      &::after
+        background: $colorAcent
+    &:hover
+      color: $fontColor
+
+
 
 // global helpers
 .text-center
@@ -160,3 +210,6 @@
     -webkit-apperance: none
     border: 0
     box-shadow: none
+
+.relative
+  position: relative

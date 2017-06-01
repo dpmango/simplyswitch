@@ -1,0 +1,21 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .e-calc
+      .container.text-center
+        .e-calc__heading.e-calc__heading--huge Select your adress
+        .e-calc__postcode
+          .e-calc__input.e-calc__input--postcode
+            label POSTCODE
+            input(type='text' value='SW20 9EE')
+
+
+      include shared/steps.pug
+          
+    include shared/footer.pug

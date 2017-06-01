@@ -37,6 +37,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Are your Gas & Electricity tariffs with the same supplier?
+            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="top" data-html="true" title="Выживший <br> Вы не смогли помочь заражённым, но покинули город и остались в живых.")
           .e-calc__checkboxes
             .e-calc__checkbox.e-calc__checkbox--yesno
               input(type='radio' name='question_2' id='question_2_1' checked)
@@ -166,7 +167,7 @@ doctype html
             .e-calc__group
               // input
               .e-calc__input.e-calc__input--toggler
-                input(type='text' placeholder='00')
+                input(type='text' autocomplete='off' placeholder='00')
                 .e-calc__toggler.right
                   .e-calc__toggler__text £
                   .e-calc__toggler__box
@@ -190,7 +191,7 @@ doctype html
             .e-calc__group
               // input
               .e-calc__input.e-calc__input--toggler
-                input(type='text' placeholder='00')
+                input(type='text' autocomplete='off' placeholder='00')
                 .e-calc__toggler.right
                   .e-calc__toggler__text £
                   .e-calc__toggler__box

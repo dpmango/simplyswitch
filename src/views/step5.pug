@@ -9,13 +9,34 @@ doctype html
     
     .e-calc
       .container.text-center
-        .e-calc__heading.e-calc__heading--huge 
-          span Application complete!
-          span Thank you for using Simply Switch to switch your energy supplier!
+        .e-calc__heading.e-calc__heading--huge Application complete!
+        .e-calc__heading.e-calc__heading--subline Thank you for using Simply Switch to switch your energy supplier!
   
         .e-calc__thanks
           p Your transfer is now under way. Please make sure that you check with your current provider(s) that your account balances are up to date, otherwise this could cause delay to your application. If you are currently paying by Direct Debit we would recommend that you do not cancel any existing Direct Debits until such time as you know the date of the transfer.
           p Our goal is simple, to give you the power of choice and to help you make informed decisions. If you have any feedback, big or small, please email our <a href='#'>Customer Services department</a>.
           p EDF Energy will email you your contract pack <span>within 3 working days</span>. If you have chosen to pay by Direct Debit this will also include confirmation of your Direct Debit Instruction.
-          
+      
+        .e-calc__heading Would you like to compare something else?
+        
+        // MORE
+        .e-calc__more
+          a(href='#').e-calc__more__card
+            .e-calc__more__head
+              .e-calc__more__head__icon
+                i.icon.icon-broadcast
+              .e-calc__more__head__desc Broadband <span> Superfast internet</span>
+            .e-calc__more__content
+              span Compare all UK providers now to find cheap deals on your home broadband internet service.
+          // card
+          a(href='#').e-calc__more__card
+            .e-calc__more__head
+              .e-calc__more__head__icon
+                i.icon.icon-smartphone
+              .e-calc__more__head__desc Mobile phones <span> What's right for you?</span>
+            .e-calc__more__content
+              span Compare mobile phone deals from leading providers and brokers. Over 800,000 deals to choose from.
+        
+        a(href='#').e-calc__home-link No, Thank you. Just get me back to the Homepage
+        
     include shared/footer.pug

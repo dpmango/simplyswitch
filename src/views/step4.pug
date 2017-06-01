@@ -158,7 +158,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - What is your name?
-          .e-calc__group
+          .e-calc__group.e-calc__group--user
             .e-calc__select
               input(type='hidden')
               .e-calc__select__box
@@ -170,7 +170,42 @@ doctype html
                   span(data-value='Ms') Ms
                   span(data-value='Mrs') Mrs
                   span(data-value='Doctor') Doctor
+            
+            .e-calc__input.e-calc__input--contact
+              input(type='text' autocomplete='off' placeholder='Your first name')
+              i.icon.icon-avatar
+            .e-calc__input.e-calc__input--contact
+              input(type='text' autocomplete='off' placeholder='Your last name')
+              i.icon.icon-avatar
         
+        // question
+        .e-calc__question
+          .e-calc__heading - Contact information:  
+          .e-calc__editable
+            .e-calc__editable__icon
+              i.icon.icon-email
+            .e-calc__editable__value my.email@gmail.com
+            .e-calc__editable__edit edit
+            
+            .e-calc__input.e-calc__input--contact
+              input(type='text' placeholder='my.email@gmail.com')
+              i.icon.icon-email
+          .e-calc__editable
+            .e-calc__editable__icon
+              i.icon.icon-phone
+            .e-calc__editable__value 03069 990947
+            .e-calc__editable__edit edit
+            .e-calc__input.e-calc__input--contact
+              input(type='text'  placeholder='03069 990947')
+              i.icon.icon-phone
+              
+        // question
+        .e-calc__question
+          .e-calc__heading - What is your date of Birth?
+          .e-calc__input.e-calc__input--contact.e-calc__input--date
+            input(type='text' autocomplete='off' placeholder='dd.mm.yyyy').js-datepicker
+            i.icon.icon-calendar
+              
         // question
         .e-calc__question
           .e-calc__heading - Additional information from EDF Energy
@@ -187,8 +222,8 @@ doctype html
           .e-calc__tip Please tick this box if you wish Simply Switch to keep you informed about other products and services they provide.
           .e-calc__checkboxes
             .e-calc__checkbox.e-calc__checkbox--yesno
-              input(type='radio' name='question_7' id='question_7_1')
-              label(for='question_7_1')
+              input(type='radio' name='question_8' id='question_8_1')
+              label(for='question_8_1')
                 i.icon.icon-yes
                 span Agree                  
         

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>round</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.490885417">
+        <g id="4.-Apply" transform="translate(-877.000000, -2172.000000)" fill-rule="nonzero" fill="#262626">
+            <g id="body" transform="translate(0.000000, 85.000000)">
+                <g id="add" transform="translate(0.000000, 1252.000000)">
+                    <g id="question-copy-5" transform="translate(228.000000, 829.000000)">
+                        <g id="round" transform="translate(649.000000, 6.000000)">
+                            <path d="M11,0 C4.95,0 0,4.95 0,11 C0,17.05 4.95,22 11,22 C17.05,22 22,17.05 22,11 C22,4.95 17.05,0 11,0 Z M12.1,18.7 L9.9,18.7 L9.9,16.5 L12.1,16.5 L12.1,18.7 Z M14.41,10.23 L13.42,11.22 C12.5400431,11.9900431 12.1,12.65 12.1,14.3 L9.9,14.3 L9.9,13.75 C9.9,12.54 10.34,11.44 11.22,10.67 L12.54,9.24 C12.98,8.91 13.2,8.36 13.2,7.7 C13.2,6.49 12.21,5.5 11,5.5 C9.79,5.5 8.8,6.49 8.8,7.7 L6.6,7.7 C6.6,5.28 8.58,3.3 11,3.3 C13.42,3.3 15.4,5.28 15.4,7.7 C15.4,8.69 14.96,9.57 14.41,10.23 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

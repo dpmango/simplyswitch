@@ -49,7 +49,16 @@ $(document).ready(function () {
     e.preventDefault();
   });
 
+  /////
   // UI
+  /////
+
+  // DATEPICKER
+  $('.js-datepicker').datepicker({
+    language: 'en',
+    range: false,
+    multipleDatesSeparator: " - "
+  });
 
   // checkbox click
   $('.e-calc__checkbox').on('click', function () {
@@ -99,7 +108,15 @@ $(document).ready(function () {
     }
   });
 
+  // editable field
+  $('.e-calc__editable__edit').on('click', function () {
+    $(this).parent().addClass('active');
+  });
+
   // Masked input
   $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
   $("input[type='tel']").mask("99999 999999");
+
+  // BOOTSTRAP TOOLTIPS
+  $('[data-toggle="tooltip"]').tooltip();
 });

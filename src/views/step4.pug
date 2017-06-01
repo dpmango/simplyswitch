@@ -16,6 +16,11 @@ doctype html
             input(type='text' value='SW20 9EE')
 
 
-      include shared/steps.pug
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='index.html').e-calc__step(data-step='1') Location
+          a(href='step2.html').e-calc__step(data-step='2') Current use
+          a(href='step3.html').e-calc__step(data-step='3') Compare
+          a(href='#').e-calc__step(data-step='4').active Apply
           
     include shared/footer.pug

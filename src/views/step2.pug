@@ -86,6 +86,31 @@ doctype html
       
         // question
         .e-calc__question
+          .e-calc__heading - How do you pay your electricity bills?
+          .e-calc__helper-row
+            .e-calc__checkboxes.e-calc__checkboxes--vertical
+              .e-calc__checkbox
+                input(type='radio' name='question_4' id='question_4_1' )
+                label(for='question_4_1')
+                  span Monthly direct debit
+              .e-calc__checkbox
+                input(type='radio' name='question_4' id='question_4_2')
+                label(for='question_4_2')
+                  span Payment on receipts of Bill      
+              .e-calc__checkbox
+                input(type='radio' name='question_4' id='question_4_3' )
+                label(for='question_4_3')
+                  span Monthly direct debit
+              .e-calc__checkbox
+                input(type='radio' name='question_4' id='question_4_4')
+                label(for='question_4_4')
+                  span Payment on receipts of Bill    
+            .e-calc__helper 
+              p If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.
+                 
+                         
+        // question
+        .e-calc__question
           .e-calc__heading - Are you in arrears with your current supplier?
           .e-calc__checkboxes
             .e-calc__checkbox.e-calc__checkbox--yesno
@@ -113,8 +138,170 @@ doctype html
               label(for='question_6_2')
                 i.icon.icon-no
                 span No
-              
-              
+        
+        // question
+        .e-calc__question
+          .e-calc__heading - Please select your tariff name from the list below
+          .e-calc__select
+            input(type='hidden')
+            .e-calc__select__box
+              .e-calc__select__visible 
+                span Please select
+                i.icon.icon-dropdown
+              .e-calc__select__dropdown
+                span(data-value='Pre Pay Fix October 2018') Pre Pay Fix October 2018
+                span(data-value='Pre Pay Fix December 2018') Pre Pay Fix December 2018
+          .e-calc__tip If you are currently registered for the Warm Home discount scheme, by changing supplier you may lose this benefit.
+                  
+      // next section
+      .e-calc__section
+        .container
+          .e-calc__section-title About your energy usage
+      
+      .container
+        // question
+        .e-calc__question
+          .e-calc__heading - How much Gas you currently use?
+          .e-calc__helper-row
+            .e-calc__group
+              // input
+              .e-calc__input.e-calc__input--toggler
+                input(type='text' placeholder='00')
+                .e-calc__toggler.right
+                  .e-calc__toggler__text £
+                  .e-calc__toggler__box
+                  .e-calc__toggler__text kWh
+              // select
+              .e-calc__select
+                input(type='hidden')
+                .e-calc__select__box
+                  .e-calc__select__visible 
+                    span Monthly
+                    i.icon.icon-dropdown
+                  .e-calc__select__dropdown
+                    span(data-value='Monthly') Monthly
+                    span(data-value='Yearly') Yearly
+            .e-calc__helper.e-calc__helper--narrow KWH will give you the most accurate quotation. These details can be found on your latest bill. 
+        
+        // question
+        .e-calc__question
+          .e-calc__heading - How much Electrisity you currently use?
+          .e-calc__helper-row
+            .e-calc__group
+              // input
+              .e-calc__input.e-calc__input--toggler
+                input(type='text' placeholder='00')
+                .e-calc__toggler.right
+                  .e-calc__toggler__text £
+                  .e-calc__toggler__box
+                  .e-calc__toggler__text kWh
+              // select
+              .e-calc__select
+                input(type='hidden')
+                .e-calc__select__box
+                  .e-calc__select__visible 
+                    span Monthly
+                    i.icon.icon-dropdown
+                  .e-calc__select__dropdown
+                    span(data-value='Monthly') Monthly
+                    span(data-value='Yearly') Yearly
+                               
+        // question
+        .e-calc__question
+          .e-calc__heading - How would you like to pay your new bill?
+          .e-calc__helper-row
+            .e-calc__checkboxes.e-calc__checkboxes--vertical
+              .e-calc__checkbox
+                input(type='radio' name='question_7' id='question_7_1' )
+                label(for='question_7_1')
+                  span Monthly direct debit
+              .e-calc__checkbox
+                input(type='radio' name='question_7' id='question_7_2')
+                label(for='question_7_2')
+                  span Payment on receipts of Bill      
+              .e-calc__checkbox
+                input(type='radio' name='question_7' id='question_7_3' )
+                label(for='question_7_3')
+                  span Monthly direct debit
+              .e-calc__checkbox
+                input(type='radio' name='question_7' id='question_7_4')
+                label(for='question_7_4')
+                  span Payment on receipts of Bill    
+            .e-calc__helper 
+              p If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.
+                 
+      
+      // next section
+      .e-calc__section
+        .container
+          .e-calc__section-title Your details
+      
+      .container
+        // question
+        .e-calc__question
+          .e-calc__heading - Email address:
+          .e-calc__helper-row
+            // input
+            .e-calc__input.e-calc__input--contact
+              input(type='email' placeholder='my.email@gmail.com')
+              i.icon.icon-email
+            .e-calc__helper.e-calc__helper--narrow We will send details on your switch to this email. We wont’t share your private data
+        
+        // question
+        .e-calc__question
+          .e-calc__heading - Phone number:
+          .e-calc__helper-row
+            // input
+            .e-calc__input.e-calc__input--contact
+              input(type='tel' placeholder='03069 990947')
+              i.icon.icon-phone
+            .e-calc__helper.e-calc__helper--narrow If for any reason you can't complete your comparison, we will be able to call you back and help.
+            
+            
+      // next section
+      .e-calc__section
+        .container
+          .e-calc__section-title Your new tariff
+      
+      .container
+        // question
+        .e-calc__question
+          .e-calc__heading - Show plans that you can switch to online with Simply Switch ?
+          .e-calc__cta-logos
+            .e-calc__checkbox.e-calc__checkbox--cta
+              input(type='radio' name='question_8' id='question_8_1' )
+              label(for='question_8_1')
+                span Yes. Let Simply Switch organise the switch for you and provide support as needed.
+            
+            .e-calc__tip You will have <span>38 tarrifs</span> to choose from, including once from 
+            .e-calc__logo-box
+              img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+              img(src='images/logos/eon.png' srcset='images/logos/eon@2x.png 2x')
+              img(src='images/logos/edf.png' srcset='images/logos/edf@2x.png 2x')
+              img(src='images/logos/npower.png' srcset='images/logos/npower@2x.png 2x')
+              img(src='images/logos/spower.png' srcset='images/logos/spower@2x.png 2x')
+              img(src='images/logos/sse.png' srcset='images/logos/sse@2x.png 2x')
+          
+          // logos
+          .e-calc__cta-logos
+            .e-calc__checkbox.mt40.e-calc__checkbox--cta
+              input(type='radio' name='question_8' id='question_8_2' )
+              label(for='question_8_2')
+                span No. Show all plans including those that you can't switch to with Simply Switch
+            
+            .e-calc__tip You will have <span>107 tarrifs</span> to choose from, including once from 
+            .e-calc__logo-box
+              img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+              img(src='images/logos/eon.png' srcset='images/logos/eon@2x.png 2x')
+              img(src='images/logos/edf.png' srcset='images/logos/edf@2x.png 2x')
+              img(src='images/logos/npower.png' srcset='images/logos/npower@2x.png 2x')
+              img(src='images/logos/spower.png' srcset='images/logos/spower@2x.png 2x')
+              img(src='images/logos/sse.png' srcset='images/logos/sse@2x.png 2x')
+                    
+        // CTA
+        .e-calc__cta
+          a(href='step3.html').e-calc__btn.e-calc__btn--primary.e-calc__btn--huge See the results
+                        
       // Progress indicator
       .e-calc__progress
         .container
@@ -125,6 +312,11 @@ doctype html
             a(href='step2.html').e-calc__btn.e-calc__btn--progress.disabled.js-toggleStep See Results
           
 
-      include shared/steps.pug
-          
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='index.html').e-calc__step(data-step='1') Location
+          a(href='#').e-calc__step(data-step='2').active Current use
+          a(href='step3.html').e-calc__step(data-step='3') Compare
+          a(href='step4.html').e-calc__step(data-step='4') Apply
+    
     include shared/footer.pug

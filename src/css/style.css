@@ -42,6 +42,272 @@ body, html {
 }
 
 /* 2. Elements */
+/* UI */
+.e-calc__checkboxes {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.e-calc__checkboxes--vertical .e-calc__checkbox {
+    -webkit-flex: 0 1 360px;
+        -ms-flex: 0 1 360px;
+            flex: 0 1 360px;
+    margin-top: 15px;
+    text-align: left;
+    -webkit-box-flex: 0;
+}
+.e-calc__checkboxes--vertical .e-calc__checkbox label {
+    padding: 15px 10px;
+    padding-left: 35px;
+}
+.e-calc__checkboxes--vertical .e-calc__checkbox:first-child {
+    margin-top: 20px;
+}
+.e-calc__checkbox {
+    -webkit-flex: 0 1 210px;
+        -ms-flex: 0 1 210px;
+            flex: 0 1 210px;
+    margin-top: 20px;
+    margin-right: 35px;
+    border: 4px solid #E2E2E2;
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    font-size: 18px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-box-flex: 0;
+}
+.e-calc__checkbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 0.1px;
+    height: 0.1px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+}
+.e-calc__checkbox label {
+    position: relative;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.e-calc__checkbox label span {
+    display: block;
+    font-style: 18px;
+    cursor: pointer;
+}
+.e-calc__checkbox--vertical {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+            justify-content: center;
+    height: 110px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+}
+.e-calc__checkbox--vertical label .icon, .e-calc__checkbox--vertical label img {
+    margin-bottom: 20px;
+}
+.e-calc__checkbox--yesno {
+    text-transform: uppercase;
+}
+.e-calc__checkbox--yesno label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    padding: 15px 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.e-calc__checkbox--yesno label .icon {
+    margin-right: 30px;
+}
+.e-calc__checkbox--yesno label span {
+    margin-bottom: -2px;
+}
+.e-calc__checkbox--cta {
+    display: inline-block;
+}
+.e-calc__checkbox--cta label {
+    padding: 15px 35px;
+    text-align: left;
+}
+.e-calc__checkbox.selected {
+    border-color: #8CC73F;
+}
+.e-calc__checkbox.selected label span {
+    font-weight: 600;
+}
+.e-calc__checkbox:hover:not(.selected) {
+    border-color: #2f313a;
+    border-color: rgba(47, 49, 58, 0.25);
+}
+/* select */
+.e-calc__select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    display: inline-block;
+    margin-top: 20px;
+    border: 4px solid #E2E2E2;
+    border-radius: 5px;
+    background: white;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.e-calc__select:hover {
+    border-color: #2f313a;
+    border-color: rgba(47, 49, 58, 0.25);
+}
+.e-calc__select.active {
+    border-color: #8CC73F;
+}
+.e-calc__select.active .e-calc__select__dropdown {
+    overflow-y: scroll;
+    height: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+.e-calc__select.active .e-calc__select__visible .icon {
+    -webkit-transform: translate3d(0,-50%,0) rotate(180deg);
+            transform: translate3d(0,-50%,0) rotate(180deg);
+}
+.e-calc__select__box {
+    position: relative;
+    width: 360px;
+}
+.e-calc__select__visible {
+    padding: 15px 35px;
+    cursor: pointer;
+}
+.e-calc__select__visible .icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(0,-50%,0);
+            transform: translate3d(0,-50%,0);
+}
+.e-calc__select__dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    max-height: 350px;
+    height: 0;
+    background: white;
+    -webkit-box-shadow: 0 5px 10px rgba(47, 49, 58, 0.15);
+            box-shadow: 0 5px 10px rgba(47, 49, 58, 0.15);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-transform: translate3d(0,50px,0);
+            transform: translate3d(0,50px,0);
+}
+.e-calc__select__dropdown span {
+    display: block;
+    padding: 10px 35px;
+    border-bottom: 1px solid #E2E2E2;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.e-calc__select__dropdown span:hover {
+    background: #F5F5F5;
+}
+.e-calc__toggler {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.e-calc__toggler.right .e-calc__toggler__text {}
+.e-calc__toggler.right .e-calc__toggler__text:first-child {
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.5);
+}
+.e-calc__toggler.right .e-calc__toggler__box {}
+.e-calc__toggler.right .e-calc__toggler__box:after {
+    -webkit-transform: translate3d(35px,0,0);
+            transform: translate3d(35px,0,0);
+}
+.e-calc__toggler.left .e-calc__toggler__text {}
+.e-calc__toggler.left .e-calc__toggler__text:last-child {
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.5);
+}
+.e-calc__toggler.left .e-calc__toggler__box {}
+.e-calc__toggler.left .e-calc__toggler__box:after {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+.e-calc__toggler__text {
+    font-weight: 700;
+    font-size: 14px;
+    -webkit-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+.e-calc__toggler__text:first-child {
+    margin-right: 10px;
+}
+.e-calc__toggler__text:last-child {
+    margin-left: 10px;
+}
+.e-calc__toggler__box {
+    position: relative;
+    width: 60px;
+    height: 25px;
+    border: 1px solid #E2E2E2;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.e-calc__toggler__box:after {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #8CC73F;
+    -webkit-box-shadow: 0 1px 4px rgba(47, 49, 58, 0.15);
+            box-shadow: 0 1px 4px rgba(47, 49, 58, 0.15);
+    content: ' ';
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
 /* ICONS */
 .icon {
     display: inline-block;
@@ -87,6 +353,21 @@ body, html {
     height: 21px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='21px' height='22px' viewBox='0 0 21 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eno%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='2.-Current-use' transform='translate(-536.000000, -524.000000)' fill-rule='nonzero' fill='%23333333'%3E %3Cg id='body' transform='translate(0.000000, 89.000000)'%3E %3Cg id='question-copy' transform='translate(229.000000, 363.000000)'%3E %3Cg id='checkbox-copy' transform='translate(245.000000, 53.000000)'%3E %3Cpath d='M62.0034526,37.723 C62.0424526,38.59 62.4174526,39.3905 63.0584526,39.9755 C63.6589526,40.5235 64.4369526,40.8255 65.2494526,40.8255 C66.1604526,40.8255 67.0354526,40.44 67.6499526,39.767 L72.2474526,34.732 L76.8449526,39.7675 C77.4594526,40.44 78.3344526,40.826 79.2454526,40.826 C80.0584526,40.826 80.8369526,40.524 81.4364526,39.976 C82.0774526,39.3905 82.4524526,38.5905 82.4914526,37.7235 C82.5309526,36.8565 82.2304526,36.0255 81.6449526,35.3845 L76.6494526,29.9125 L81.6449526,24.441 C82.2304526,23.8 82.5309526,22.969 82.4914526,22.102 C82.4524526,21.235 82.0774526,20.4345 81.4364526,19.8495 C80.8364526,19.3015 80.0579526,19 79.2454526,19 C78.3344526,19 77.4594526,19.3855 76.8449526,20.0585 L72.2474526,25.0935 L67.6499526,20.058 C67.0354526,19.3855 66.1604526,19 65.2489526,19 C64.4364526,19 63.6584526,19.302 63.0584526,19.8495 C62.4174526,20.435 62.0424526,21.235 62.0034526,22.102 C61.9639526,22.969 62.2644526,23.8 62.8499526,24.441 L67.8454526,29.913 L62.8499526,35.3835 C62.2644526,36.025 61.9639526,36.8555 62.0034526,37.723 Z M63.9574526,36.395 L69.0774526,30.7875 C69.5264526,30.2965 69.5264526,29.5275 69.0779526,29.0375 L63.9574526,23.4285 C63.6424526,23.0835 63.4804526,22.6365 63.5014526,22.1695 C63.5229526,21.7025 63.7244526,21.272 64.0704526,20.9565 C64.7559526,20.3305 65.9179526,20.385 66.5424526,21.069 L71.3569526,26.342 C71.8179526,26.846 72.6769526,26.8465 73.1389526,26.3415 L77.9529526,21.0695 C78.5784526,20.384 79.7404526,20.331 80.4249526,20.957 C80.7704526,21.272 80.9724526,21.703 80.9939526,22.17 C81.0149526,22.637 80.8529526,23.0845 80.5379526,23.4295 L75.4174526,29.0365 C74.9684526,29.5275 74.9684526,30.2965 75.4169526,30.7865 L80.5374526,36.395 C80.8524526,36.74 81.0144526,37.187 80.9934526,37.6545 C80.9719526,38.1215 80.7704526,38.552 80.4244526,38.8675 C79.7399526,39.4935 78.5789526,39.4405 77.9524526,38.755 L73.1379526,33.482 C72.9074526,33.23 72.5829526,33.0855 72.2474526,33.0855 C71.9119526,33.0855 71.5874526,33.23 71.3564526,33.4825 L66.5424526,38.7545 C65.9164526,39.4395 64.7569526,39.494 64.0704526,38.867 C63.7249526,38.552 63.5229526,38.121 63.5014526,37.654 C63.4804526,37.1875 63.6424526,36.7405 63.9574526,36.395 Z' id='no'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
+.icon-dropdown {
+    width: 14px;
+    height: 8px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='15px' height='9px' viewBox='0 0 15 9' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EShape%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='2.-Current-use--scrolled' transform='translate(-549.000000, -1496.000000)' fill-rule='nonzero' fill='%23333333'%3E %3Cg id='body' transform='translate(0.000000, -15.000000)'%3E %3Cg id='question-copy-6' transform='translate(229.000000, 1432.000000)'%3E %3Cg id='input' transform='translate(0.000000, 53.000000)'%3E %3Cpath d='M327.495421,34.4914535 C327.237261,34.4914535 326.979132,34.3955138 326.782307,34.2040379 L320.588618,28.1756647 C320.194618,27.7921854 320.194618,27.1704394 320.588618,26.7871152 C320.982458,26.403791 321.621133,26.403791 322.015165,26.7871152 L327.495421,32.1213533 L332.97571,26.7873014 C333.36971,26.4039772 334.008321,26.4039772 334.402129,26.7873014 C334.79632,27.1706256 334.79632,27.7923716 334.402129,28.1758509 L328.208535,34.2042241 C328.011615,34.395731 327.753486,34.4914535 327.495421,34.4914535 Z' id='Shape'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.icon-email {
+    width: 30px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='30px' height='18px' viewBox='0 0 30 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eemail%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.706748188'%3E %3Cg id='2.-Current-use--scrolled' transform='translate(-640.000000, -2693.000000)' fill-rule='nonzero' fill='%23262626'%3E %3Cg id='body' transform='translate(0.000000, -15.000000)'%3E %3Cg id='question-copy-8' transform='translate(233.000000, 2634.000000)'%3E %3Cg id='input-copy' transform='translate(0.000000, 53.000000)'%3E %3Cpath d='M436.979258,22.5365769 C436.978027,21.7029808 436.288906,21.0256731 435.44252,21.0256731 L435.440527,21.0256731 L408.53457,21.0620769 C408.124121,21.0625962 407.738398,21.2205 407.448535,21.5066538 C407.15873,21.7928654 406.999473,22.1731154 407,22.5771346 L407.020801,37.4634231 C407.021328,37.8675577 407.181699,38.2473462 407.472324,38.53275 C407.762422,38.8176346 408.147676,38.9743846 408.557422,38.9743846 L408.559473,38.9743846 L435.465371,38.9379808 C436.31252,38.9368269 437.000938,38.2572692 436.999941,37.4229231 L436.979258,22.5365769 Z M433.754551,22.5409615 L422.001172,30.5858077 L410.225,22.5728077 L433.754551,22.5409615 Z M426.971445,32.1040962 L433.942402,37.4270769 L410.037793,37.4593846 L417.05123,32.1040962 C417.386504,31.848 417.447559,31.3728462 417.18752,31.0426154 C416.927422,30.7125 416.444844,30.6523846 416.109453,30.9084231 L408.556309,36.6758654 L408.537559,23.2638462 L421.565527,32.1286731 C421.697012,32.2181538 421.849648,32.2628077 422.002344,32.2628077 C422.155684,32.2628077 422.309141,32.2176346 422.440918,32.1274615 L435.443574,23.2276154 L435.463262,36.6737308 L427.913105,30.9084808 C427.578008,30.6525 427.095195,30.7125577 426.835156,31.0426731 C426.575059,31.3727885 426.636055,31.8480577 426.971445,32.1040962 Z' id='email'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.icon-phone {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='24px' height='24px' viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Ephone%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.700011322'%3E %3Cg id='2.-Current-use--scrolled' transform='translate(-644.000000, -2843.000000)' fill-rule='nonzero' fill='%23262626'%3E %3Cg id='body' transform='translate(0.000000, -15.000000)'%3E %3Cg id='question-copy-9' transform='translate(233.000000, 2787.000000)'%3E %3Cg id='input-copy' transform='translate(0.000000, 53.000000)'%3E %3Cpath d='M415.832575,33.9395061 C418.204664,36.7691787 421.06014,38.9971107 424.319271,40.5735716 C425.560133,41.1603929 427.219598,41.8566217 429.068432,41.9759752 C429.18305,41.9809483 429.292684,41.9859213 429.407302,41.9859213 C430.648164,41.9859213 431.64484,41.5582379 432.457131,40.6780059 C432.462114,40.6730328 432.472081,40.6630867 432.477064,40.6531406 C432.7661,40.3050262 433.095003,39.9917232 433.438857,39.658528 C433.673075,39.4347402 433.912278,39.2010063 434.141513,38.9622993 C435.202973,37.8582794 435.202973,36.4558757 434.131546,35.3866673 L431.136535,32.3978567 C430.62823,31.870712 430.020258,31.5922205 429.382385,31.5922205 C428.744513,31.5922205 428.131557,31.870712 427.608302,32.3928836 L425.824252,34.17324 C425.6598,34.0787518 425.490365,33.9942098 425.330897,33.9146408 C425.131562,33.8151795 424.947177,33.7206913 424.782725,33.616257 C423.158143,32.5868331 421.683063,31.2441062 420.272766,29.5184534 C419.560143,28.6183291 419.081738,27.8624236 418.747852,27.0915989 C419.21629,26.6688886 419.654827,26.226286 420.078414,25.7936296 C420.227916,25.6394646 420.382401,25.4852997 420.536885,25.3311348 C421.075091,24.794044 421.364127,24.1724112 421.364127,23.5408322 C421.364127,22.9092533 421.080074,22.2876205 420.536885,21.7505297 L419.051838,20.268557 C418.87742,20.0944999 418.712968,19.9254157 418.543533,19.7513585 C418.21463,19.4131903 417.870777,19.0650759 417.531907,18.751773 C417.018619,18.2494936 416.41563,17.9859213 415.777757,17.9859213 C415.144868,17.9859213 414.536896,18.2494936 414.003674,18.756746 L412.13989,20.6166714 C411.46215,21.2930079 411.07843,22.1135633 410.998696,23.0634182 C410.904012,24.2519802 411.12328,25.5151381 411.691386,27.0418683 C412.563477,29.404073 413.87909,31.5971936 415.832575,33.9395061 Z M412.214641,23.1678525 C412.274441,22.5064352 412.528594,21.9544253 413.006998,21.4770113 L414.860815,19.627032 C415.149852,19.3485405 415.468788,19.2043217 415.777757,19.2043217 C416.081744,19.2043217 416.390713,19.3485405 416.674766,19.6369781 C417.008652,19.945308 417.322605,20.268557 417.661475,20.6116984 C417.83091,20.7857556 418.005328,20.9598127 418.179747,21.138843 L419.664794,22.6208156 C419.973764,22.9291455 420.133232,23.2424485 420.133232,23.5507783 C420.133232,23.8591082 419.973764,24.1724112 419.664794,24.4807411 C419.510309,24.634906 419.355824,24.794044 419.20134,24.9482089 C418.737885,25.4156768 418.304331,25.8582794 417.825927,26.2809897 C417.81596,26.2909358 417.810977,26.2959089 417.80101,26.305855 C417.387389,26.7186192 417.452173,27.1114912 417.551841,27.4098749 C417.556824,27.4247941 417.561808,27.4347402 417.566791,27.4496594 C417.950511,28.369676 418.483733,29.244935 419.315957,30.2892781 C420.810971,32.1293113 422.385719,33.5565803 424.119936,34.6556271 C424.334221,34.7948728 424.563457,34.9042802 424.777742,35.0136876 C424.977077,35.1131488 425.161462,35.207637 425.325914,35.3120713 C425.345847,35.3220175 425.360797,35.3319636 425.380731,35.3419097 C425.545182,35.4264518 425.704651,35.4662363 425.864119,35.4662363 C426.262789,35.4662363 426.521925,35.2126101 426.606642,35.128068 L428.470427,33.2681426 C428.759463,32.979705 429.073416,32.8255401 429.382385,32.8255401 C429.761122,32.8255401 430.070092,33.059274 430.264443,33.2681426 L433.269422,36.2619263 C433.867427,36.8586938 433.862444,37.5051919 433.254472,38.1367709 C433.04517,38.3605587 432.825901,38.5744004 432.591682,38.7981882 C432.242845,39.1363565 431.879059,39.4844708 431.550156,39.8773428 C430.977067,40.4940026 430.294344,40.7824402 429.412285,40.7824402 C429.327568,40.7824402 429.237867,40.7774671 429.15315,40.7724941 C427.518601,40.6680597 425.99867,40.0315077 424.857476,39.4894439 C421.757814,37.9925521 419.036888,35.8690544 416.779417,33.1736544 C414.920616,30.9407493 413.669788,28.8620092 412.842547,26.6340771 C412.329258,25.2664849 412.134907,24.1674381 412.214641,23.1678525 Z' id='phone'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
 /* buttons */
 .e-calc button {}
 .e-calc button:focus {
@@ -115,6 +396,10 @@ body, html {
 .e-calc__btn--primary:hover {
     background: #3179C5;
 }
+.e-calc__btn--huge {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
 .e-calc__btn--progress {
     padding: 8px 50px;
     background: #8CC73F;
@@ -124,6 +409,345 @@ body, html {
     background: #8cc73f;
     background: rgba(140, 199, 63, 0.5);
     cursor: not-allowed;
+}
+/* SCROLLBAR BASE CSS */
+.scroll-wrapper {
+    position: relative;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+.scroll-wrapper > .scroll-content {
+    position: relative !important;
+    top: 0;
+    left: 0;
+    overflow: scroll !important;
+    -webkit-box-sizing: content-box !important;
+            box-sizing: content-box !important;
+    margin: 0;
+    padding: 0;
+    max-width: none !important;
+    max-height: none;
+    width: auto !important;
+    height: auto;
+    border: none !important;
+}
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.scroll-wrapper.scroll--rtl {
+    direction: rtl;
+}
+.scroll-element {
+    display: none;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+}
+.scroll-element div {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+}
+.scroll-element .scroll-bar, .scroll-element .scroll-arrow {
+    cursor: default;
+}
+.scroll-element.scroll-x.scroll-scrollx_visible, .scroll-element.scroll-y.scroll-scrolly_visible {
+    display: block;
+}
+.scroll-textarea {
+    border: 1px solid #cccccc;
+    border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+    overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+    position: relative !important;
+    top: 0;
+    overflow: scroll !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 2px;
+    max-width: none !important;
+    max-height: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    outline: none;
+    border: none !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+/* INNER */
+.scrollbar-inner > .scroll-element {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.scrollbar-inner > .scroll-element div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+    overflow: hidden;
+    border-radius: 8px;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track, .scrollbar-inner > .scroll-element .scroll-bar {
+    border-radius: 8px;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track, .scrollbar-inner > .scroll-element .scroll-bar {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity = 40);
+}
+.scrollbar-inner > .scroll-element .scroll-element_track {
+    background-color: #e0e0e0;
+}
+.scrollbar-inner > .scroll-element .scroll-bar {
+    background-color: #c2c2c2;
+}
+.scrollbar-inner > .scroll-element.scroll-x {
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
+.scrollbar-inner > .scroll-element.scroll-y {
+    top: 0;
+    right: 2px;
+    width: 8px;
+    height: 100%;
+}
+.scrollbar-inner > .scroll-element:hover .scroll-bar, .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+    background-color: #919191;
+}
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+    left: -12px;
+}
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+    top: -12px;
+}
+.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -12px;
+}
+.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -12px;
+}
+/* MAC */
+.scrollbar-macosx > .scroll-element {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.scrollbar-macosx > .scroll-element div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+}
+.scrollbar-macosx > .scroll-element .scroll-element_track {
+    display: none;
+}
+.scrollbar-macosx > .scroll-element .scroll-bar {
+    display: block;
+    border-radius: 7px;
+    background-color: #6C6E71;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity = 0);
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+.scrollbar-macosx > .scroll-element {}
+.scrollbar-macosx > .scroll-element.scroll-draggable .scroll-bar {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity = 70);
+}
+.scrollbar-macosx > .scroll-element.scroll-x {
+    bottom: 0px;
+    left: 0;
+    overflow: visible;
+    min-width: 100%;
+    width: 100%;
+    height: 0px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y {
+    top: 0;
+    right: 0px;
+    min-height: 100%;
+    width: 0px;
+    height: 100%;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-bar {
+    top: -9px;
+    min-width: 10px;
+    height: 7px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-bar {
+    left: -9px;
+    min-height: 10px;
+    width: 7px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_outer {
+    left: 2px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x .scroll-element_size {
+    left: -4px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_outer {
+    top: 2px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y .scroll-element_size {
+    top: -4px;
+}
+.scrollbar-macosx > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -11px;
+}
+.scrollbar-macosx > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -11px;
+}
+.scrollbar-macosx:hover > .scroll-element .scroll-bar {
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity = 70);
+}
+/* DYNAMIC */
+.scrollbar-dynamic > .scroll-element {
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+.scrollbar-dynamic > .scroll-element div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+}
+.scrollbar-dynamic > .scroll-element .scroll-element_outer {
+    border-radius: 12px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    opacity: 0.3;
+}
+.scrollbar-dynamic > .scroll-element .scroll-element_size {
+    border-radius: 12px;
+    background-color: #cccccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+.scrollbar-dynamic > .scroll-element .scroll-bar {
+    border-radius: 7px;
+    background-color: #6c6e71;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x {
+    bottom: 2px;
+    left: 0;
+    min-width: 100%;
+    width: 100%;
+    height: 7px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y {
+    top: 0;
+    right: 2px;
+    min-height: 100%;
+    width: 7px;
+    height: 100%;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x .scroll-bar {
+    top: auto;
+    bottom: 0;
+    min-width: 24px;
+    height: 7px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y .scroll-bar {
+    right: 0;
+    left: auto;
+    min-height: 24px;
+    width: 7px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x .scroll-element_outer {
+    top: auto;
+    bottom: 0;
+    left: 2px;
+    -webkit-transition: height 0.2s;
+    transition: height 0.2s;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y .scroll-element_outer {
+    top: 2px;
+    right: 0;
+    left: auto;
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x .scroll-element_size {
+    left: -4px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y .scroll-element_size {
+    top: -4px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -11px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -11px;
+}
+.scrollbar-dynamic > .scroll-element:hover .scroll-element_outer, .scrollbar-dynamic > .scroll-element.scroll-draggable .scroll-element_outer {
+    overflow: hidden;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity = 70);
+}
+.scrollbar-dynamic > .scroll-element:hover .scroll-element_outer .scroll-element_size, .scrollbar-dynamic > .scroll-element.scroll-draggable .scroll-element_outer .scroll-element_size {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+.scrollbar-dynamic > .scroll-element:hover .scroll-element_outer .scroll-bar, .scrollbar-dynamic > .scroll-element.scroll-draggable .scroll-element_outer .scroll-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-x {}
+.scrollbar-dynamic > .scroll-element.scroll-x:hover .scroll-element_outer, .scrollbar-dynamic > .scroll-element.scroll-x.scroll-draggable .scroll-element_outer {
+    min-height: 7px;
+    height: 20px;
+}
+.scrollbar-dynamic > .scroll-element.scroll-y {}
+.scrollbar-dynamic > .scroll-element.scroll-y:hover .scroll-element_outer, .scrollbar-dynamic > .scroll-element.scroll-y.scroll-draggable .scroll-element_outer {
+    min-width: 7px;
+    width: 20px;
 }
 
 /* 3. Modules */
@@ -160,7 +784,11 @@ body, html {
     transition: all .25s ease-in-out;
 }
 .e-calc__input.focused {
-    border-color: $primaryColor;
+    border-color: #8CC73F;
+}
+.e-calc__input:hover:not(.focused) {
+    border-color: #2f313a;
+    border-color: rgba(47, 49, 58, 0.25);
 }
 .e-calc__input--postcode {
     position: relative;
@@ -195,6 +823,45 @@ body, html {
     color: #2f313a;
     color: rgba(47, 49, 58, 0.55);
     text-align: left;
+    font-size: 18px;
+}
+.e-calc__input--toggler {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 20px;
+    padding: 5px 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.e-calc__input--toggler input {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.e-calc__input--contact {
+    position: relative;
+    margin-top: 20px;
+}
+.e-calc__input--contact .icon {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.e-calc__input--contact input {
+    padding: 14px 35px;
     font-size: 18px;
 }
 .e-calc__options {
@@ -353,6 +1020,7 @@ body, html {
 }
 .e-calc__step {
     position: relative;
+    display: block;
     margin-bottom: 40px;
     padding: 10px;
     padding-right: 20px;
@@ -415,6 +1083,16 @@ body, html {
 .e-calc__promo__text span {
     font-weight: 700;
 }
+.e-calc__section {
+    margin-top: 70px;
+    padding: 25px 0;
+    background: #3179C5;
+    color: white;
+}
+.e-calc__section-title {
+    font-weight: 600;
+    font-size: 25px;
+}
 .e-calc__progress {
     position: fixed;
     right: 0;
@@ -452,115 +1130,182 @@ body, html {
 }
 .e-calc__question {
     margin-top: 50px;
+    max-width: 950px;
 }
-/* global helpers */
-.text-center {
-    text-align: center;
-}
-.e-calc input {
-    border: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-apperance: none;
-}
-/* UI */
-.e-calc__checkboxes {
+.e-calc__helper-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
 }
-.e-calc__checkbox {
-    -webkit-flex: 0 1 210px;
-        -ms-flex: 0 1 210px;
-            flex: 0 1 210px;
-    margin-top: 20px;
-    margin-right: 35px;
-    padding: 10px;
-    border: 4px solid #E2E2E2;
-    border-radius: 5px;
-    background: white;
-    text-align: center;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
+.e-calc__helper-row .e-calc__checkboxes {
+    -webkit-flex: 0 0 360px;
+        -ms-flex: 0 0 360px;
+            flex: 0 0 360px;
     -webkit-box-flex: 0;
 }
-.e-calc__checkbox input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 0.1px;
-    height: 0.1px;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    opacity: 0;
+.e-calc__helper-row .e-calc__input--contact {
+    -webkit-flex: 0 0 460px;
+        -ms-flex: 0 0 460px;
+            flex: 0 0 460px;
+    -webkit-box-flex: 0;
 }
-.e-calc__checkbox label {
-    position: relative;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-}
-.e-calc__checkbox label span {
-    display: block;
-    font-style: 18px;
-    cursor: pointer;
-}
-.e-calc__checkbox--vertical {
+.e-calc__helper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-justify-content: center;
             justify-content: center;
-    height: 110px;
+    margin-top: 20px;
+    margin-left: 110px;
+    padding-left: 110px;
+    border-left: 1px solid rgba(47, 49, 58, 0.25);
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.7);
+    line-height: 1.75;
+    -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
 }
-.e-calc__checkbox--vertical label .icon, .e-calc__checkbox--vertical label img {
-    margin-bottom: 20px;
+.e-calc__helper--narrow {
+    margin-left: 55px;
+    padding-left: 55px;
 }
-.e-calc__checkbox--yesno {
-    padding: 15px 10px;
-    text-transform: uppercase;
+.e-calc__tip {
+    margin-top: 15px;
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.7);
+    font-size: 16px;
 }
-.e-calc__checkbox--yesno label {
+.e-calc__tip span {
+    font-weight: 600;
+}
+.e-calc__group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 460px;
+        -ms-flex: 0 0 460px;
+            flex: 0 0 460px;
+    -webkit-align-items: flex-start;
+            align-items: flex-start;
+    -webkit-box-flex: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+}
+.e-calc__group .e-calc__input {
+    -webkit-flex: 0 0 265px;
+        -ms-flex: 0 0 265px;
+            flex: 0 0 265px;
+    margin-right: 25px;
+    width: 265px;
+    -webkit-box-flex: 0;
+}
+.e-calc__group .e-calc__select {
+    -webkit-flex: 0 1 180px;
+        -ms-flex: 0 1 180px;
+            flex: 0 1 180px;
+    -webkit-box-flex: 0;
+}
+.e-calc__group .e-calc__select__box {
+    width: 180px;
+}
+.e-calc__cta {
+    margin-top: 45px;
+    margin-bottom: 80px;
+}
+.e-calc__logo-box {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
             align-items: center;
-    -webkit-justify-content: center;
-            justify-content: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: 4px solid #E2E2E2;
+    border-radius: 5px;
+    background: white;
     -webkit-box-align: center;
         -ms-flex-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
 }
-.e-calc__checkbox--yesno label .icon {
-    margin-right: 30px;
+.e-calc__logo-box img {
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-right: 35px;
+    max-width: 100%;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-box-flex: 0;
 }
-.e-calc__checkbox--yesno label span {
-    margin-bottom: -2px;
+.e-calc__logo-box img:last-child {
+    margin-top: 0;
 }
-.e-calc__checkbox.selected {
-    border-color: #8CC73F;
+.e-calc__cta-logos .e-calc__logo-box img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
 }
-.e-calc__checkbox.selected label span {
-    font-weight: 600;
+.e-calc__cta-logos:hover:not(.selected) .e-calc__logo-box img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-filter: none;
+            filter: none;
 }
-.e-calc__checkbox:hover:not(.selected) {
-    border-color: #2f313a;
-    border-color: rgba(47, 49, 58, 0.25);
+.e-calc__cta-logos.selected .e-calc__logo-box img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-filter: none;
+            filter: none;
+}
+@media(max-width: 1100px) {
+    .e-calc {}
+    .e-calc__question {
+        padding-right: 100px;
+    }
+    .e-calc__helper {
+        margin-left: 7%;
+        padding-left: 7%;
+        font-size: 14px;
+    }
+    .e-calc__helper--narrow {
+        margin-left: 25px;
+        padding-left: 25px;
+    }
+}
+/* global helpers */
+.text-center {
+    text-align: center;
+}
+.mt40 {
+    margin-top: 60px;
+}
+.e-calc input {
+    width: 100%;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-apperance: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,13 +18,16 @@ $(document).ready(function () {
     return false;
   });
 
+  // scrollbars
+  $('.scrollbar-dynamic').scrollbar();
+
   // INPUT FOCUS
   $('.e-calc input').focusin(function () {
-    $(this).parent().addClass('focused');
+    $(this).closest('.e-calc__input').addClass('focused');
   });
 
   $('.e-calc input').focusout(function () {
-    $(this).parent().removeClass('focused');
+    $(this).closest('.e-calc__input').removeClass('focused');
   });
 
   // POSTCODE SEARCH
@@ -59,8 +62,10 @@ $(document).ready(function () {
 
     if (inputVal.is(':checked')) {
       $(this).addClass('selected');
+      $(this).closest('.e-calc__cta-logos').addClass('selected');
     } else {
       $(this).removeClass('selected');
+      $(this).closest('.e-calc__cta-logos').removeClass('selected');
     }
   });
 
@@ -70,9 +75,31 @@ $(document).ready(function () {
   //   $(this).addClass('selected');
   // }
 
+  // select
+  $('.e-calc__select__visible').on('click', function () {
+    $(this).closest('.e-calc__select').toggleClass('active');
+  });
+
+  $('.e-calc__select__dropdown span').on('click', function () {
+    var selectedVal = $(this).data('value');
+
+    $(this).closest('.e-calc__select').toggleClass('active');
+
+    $(this).closest('.e-calc__select').find('.e-calc__select__visible span').text(selectedVal);
+    $(this).closest('.e-calc__select').find('input').val(selectedVal);
+  });
+
+  // toggler
+  $('.e-calc__toggler__box').on('click', function () {
+    var parentObj = $(this).parent();
+    if (parentObj.is('.right')) {
+      parentObj.removeClass('right').addClass('left');
+    } else if (parentObj.is('.left')) {
+      parentObj.removeClass('left').addClass('right');
+    }
+  });
+
   // Masked input
   $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });
-  $("input[name='phone']").mask("9 (999) 999-9999");
-  $("#tin").mask("99-9999999");
-  $("#ssn").mask("999-99-9999");
+  $("input[type='tel']").mask("99999 999999");
 });

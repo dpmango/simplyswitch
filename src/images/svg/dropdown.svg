@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-Current-use--scrolled" transform="translate(-549.000000, -1496.000000)" fill-rule="nonzero" fill="#333333">
+            <g id="body" transform="translate(0.000000, -15.000000)">
+                <g id="question-copy-6" transform="translate(229.000000, 1432.000000)">
+                    <g id="input" transform="translate(0.000000, 53.000000)">
+                        <path d="M327.495421,34.4914535 C327.237261,34.4914535 326.979132,34.3955138 326.782307,34.2040379 L320.588618,28.1756647 C320.194618,27.7921854 320.194618,27.1704394 320.588618,26.7871152 C320.982458,26.403791 321.621133,26.403791 322.015165,26.7871152 L327.495421,32.1213533 L332.97571,26.7873014 C333.36971,26.4039772 334.008321,26.4039772 334.402129,26.7873014 C334.79632,27.1706256 334.79632,27.7923716 334.402129,28.1758509 L328.208535,34.2042241 C328.011615,34.395731 327.753486,34.4914535 327.495421,34.4914535 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

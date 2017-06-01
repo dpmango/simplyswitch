@@ -28,7 +28,9 @@
     transition: all $transitionSpeed $ease
     border-radius: 4px
     &.focused
-      border-color: $primaryColor
+      border-color: $colorAcent
+    &:hover:not(.focused)
+      border-color: $black25
     &--postcode
       position: relative
       max-width: 300px
@@ -53,6 +55,30 @@
         font-size: 18px
         color: color($fontColor a(55%))
         border-radius: 4px
+    &--toggler
+      margin-top: 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 5px 20px
+      input
+        padding-top: 9px
+        padding-bottom: 8px
+        padding-left: 15px
+        font-size: 18px
+        font-weight: 500
+    &--contact
+      margin-top: 20px
+      position: relative
+      .icon
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 22px
+      input
+        padding: 14px 35px
+        font-size: 18px
+
   &__options
     margin-top: 20px
     max-width: 470px
@@ -168,6 +194,7 @@
         width: 1px
 
   &__step
+    display: block
     position: relative
     margin-bottom: 40px
     padding: 10px
@@ -216,6 +243,15 @@
       span
         font-weight: 700
 
+  &__section
+    margin-top: 70px
+    background: $colorPrimary
+    color: white
+    padding: 25px 0
+    &-title
+      font-size: 25px
+      font-weight: 600
+
   &__progress
     position: fixed
     bottom: 0
@@ -239,80 +275,110 @@
 
   &__question
     margin-top: 50px
+    max-width: 950px
+
+  &__helper-row
+    display: flex
+    align-items: flex-start
+    .e-calc__checkboxes
+      flex: 0 0 360px
+    .e-calc__input--contact
+      flex: 0 0 460px
 
 
+  &__helper
+    flex: 0 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: 20px
+    color: color($fontColor a(70%))
+    line-height: 1.75
+    margin-left: 110px
+    padding-left: 110px
+    border-left: 1px solid $black25
+    &--narrow
+      margin-left: 55px
+      padding-left: 55px
+
+  &__tip
+    margin-top: 15px
+    font-size: 16px
+    color: color($fontColor a(70%))
+    span
+      font-weight: 600
+
+  &__group
+    flex: 0 0 460px
+    display: flex
+    align-items: flex-start
+    .e-calc__input
+      flex: 0 0 265px
+      margin-right: 25px
+      width: 265px
+    .e-calc__select
+      flex: 0 1 180px
+      &__box
+        width: 180px
+
+  &__cta
+    margin-top: 45px
+    margin-bottom: 80px
+
+  &__logo-box
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 20px
+    background: white
+    border-radius: 5px
+    padding: 15px 35px
+    border: 4px solid $borderColor
+    img
+      flex: 0 1 auto
+      margin-right: 35px
+      max-width: 100%
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-top: 0
+  &__cta-logos
+    .e-calc__logo-box
+      img
+        filter: grayscale(1)
+        opacity: .5
+    &:hover:not(.selected)
+      .e-calc__logo-box
+        img
+          filter: none
+          opacity: 1
+    &.selected
+      .e-calc__logo-box
+        img
+          filter: none
+          opacity: 1
+
+@media(width <= 1100px)
+  .e-calc
+    &__question
+      padding-right: 100px
+    &__helper
+      margin-left: 7%
+      padding-left: 7%
+      font-size: 14px
+      &--narrow
+        margin-left: 25px
+        padding-left: 25px
 
 // global helpers
 .text-center
   text-align: center
 
+.mt40
+  margin-top: 60px
 
 .e-calc
   input
     -webkit-apperance: none
     border: 0
     box-shadow: none
-
-
-// UI
-
-.e-calc__checkboxes
-  display: flex
-  flex-wrap: wrap
-
-.e-calc__checkbox
-  margin-top: 20px
-  flex: 0 1 210px
-  margin-right: 35px
-  padding: 10px
-  background: white
-  border-radius: 5px
-  border: 4px solid $borderColor
-  text-align: center
-  transition: all $transitionSpeed $ease
-  &--vertical
-    height: 110px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    label
-      .icon, img
-        margin-bottom: 20px
-
-  &--yesno
-    padding: 15px 10px
-    text-transform: uppercase
-    label
-      display: flex
-      justify-content: center
-      align-items: center
-      .icon
-        margin-right: 30px
-      span
-        margin-bottom: -2px
-  &.selected
-    border-color: $colorAcent
-    label
-      span
-        font-weight: 600
-  &:hover:not(.selected)
-    border-color: $black25
-
-  input
-    display: none
-    width: 0.1px
-    height: 0.1px
-    opacity: 0
-    position: absolute
-    top: 0
-    left: 0
-  label
-    display: block
     width: 100%
-    position: relative
-    cursor: pointer
-
-    span
-      display: block
-      font-style: 18px
-      cursor: pointer

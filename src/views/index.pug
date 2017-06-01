@@ -20,7 +20,7 @@ doctype html
           .e-calc__options__search
             i.icon.icon-search
             input.js-hideseek(data-list='.e-calc__options__list' autocomplete='off' type='text' placeholder='SEARCH STREET OR HOUSE NUMBER')
-          ul.e-calc__options__list
+          ul.e-calc__options__list.scrollbar-dynamic
             li 42, ELM WALK, LONDON, SW20 9EE
             li 44, ELM WALK, LONDON, SW20 9EE
             li 46, ELM WALK, LONDON, SW20 9EE
@@ -71,6 +71,11 @@ doctype html
           a(href='#').e-calc__options__confirmation__back.js-eCalcWrongPostcode 
             span Whhops, this is wrong adress!
       
-      include shared/steps.pug
-          
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='#').e-calc__step(data-step='1').active Location
+          a(href='step2.html').e-calc__step(data-step='2') Current use
+          a(href='step3.html').e-calc__step(data-step='3') Compare
+          a(href='step4.html').e-calc__step(data-step='4') Apply
+    
     include shared/footer.pug

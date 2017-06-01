@@ -1,0 +1,184 @@
+
+// UI
+
+.e-calc__checkboxes
+  display: flex
+  flex-wrap: wrap
+  &--vertical
+    .e-calc__checkbox
+      flex: 0 1 360px
+      margin-top: 15px
+      text-align: left
+      label
+        padding: 15px 10px
+        padding-left: 35px
+      &:first-child
+        margin-top: 20px
+
+
+.e-calc__checkbox
+  margin-top: 20px
+  flex: 0 1 210px
+  margin-right: 35px
+  background: white
+  border-radius: 5px
+  border: 4px solid $borderColor
+  text-align: center
+  font-size: 18px
+  transition: all $transitionSpeed $ease
+  &--vertical
+    height: 110px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    label
+      .icon, img
+        margin-bottom: 20px
+
+  &--yesno
+    text-transform: uppercase
+    label
+      padding: 15px 10px
+      display: flex
+      justify-content: center
+      align-items: center
+      .icon
+        margin-right: 30px
+      span
+        margin-bottom: -2px
+  &--cta
+    display: inline-block
+    label
+      padding: 15px 35px
+      text-align: left
+
+  &.selected
+    border-color: $colorAcent
+    label
+      span
+        font-weight: 600
+  &:hover:not(.selected)
+    border-color: $black25
+
+  input
+    display: none
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+  label
+    padding: 10px
+    display: block
+    width: 100%
+    position: relative
+    cursor: pointer
+
+    span
+      display: block
+      font-style: 18px
+      cursor: pointer
+
+// select
+.e-calc__select
+  display: flex
+  display: inline-block
+  background: white
+  border-radius: 5px
+  border: 4px solid $borderColor
+  margin-top: 20px
+  transition: all $transitionSpeed $ease
+  &:hover
+    border-color: $black25
+  &.active
+    border-color: $colorAcent
+    .e-calc__select__dropdown
+      transform: translate3d(0,0,0)
+      opacity: 1
+      height: auto
+      overflow-y: scroll
+    .e-calc__select__visible
+      .icon
+        transform: translate3d(0,-50%,0) rotate(180deg)
+
+  &__box
+    position: relative
+    width: 360px
+  &__visible
+    padding: 15px 35px
+    cursor: pointer
+    .icon
+      position: absolute
+      right: 20px
+      top: 50%
+      transform: translate3d(0,-50%,0)
+      transition: all $transitionSpeed $ease
+
+  &__dropdown
+    position: absolute
+    top: 60px
+    left: 0
+    right: 0
+    opacity: 0
+    height: 0
+    max-height: 350px
+    overflow: hidden
+    background: white
+    box-shadow: 0 5px 10px color($fontColor a(15%))
+    transform: translate3d(0,50px,0)
+    transition: all $transitionSpeed $ease
+    span
+      display: block
+      padding: 10px 35px
+      cursor: pointer
+      border-bottom: 1px solid $borderColor
+      transition: all $transitionSpeed $ease
+      &:hover
+        background: $inputBg
+
+
+.e-calc__toggler
+  display: flex
+  align-items: center
+  &.right
+    .e-calc__toggler__text
+      &:first-child
+        color: $black50
+    .e-calc__toggler__box
+      &::after
+        transform: translate3d(35px,0,0)
+  &.left
+    .e-calc__toggler__text
+      &:last-child
+        color: $black50
+    .e-calc__toggler__box
+      &::after
+        transform: translate3d(0,0,0)
+
+
+  &__text
+    font-size: 14px
+    transition: color $transitionSpeed $ease
+    font-weight: 700
+    &:first-child
+      margin-right: 10px
+    &:last-child
+      margin-left: 10px
+  &__box
+    position: relative
+    size: 60px 25px
+    border-radius: 30px
+    border: 1px solid $borderColor
+    cursor: pointer
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      top: 1px
+      left: 1px
+      size: 21px
+      background: $colorAcent
+      border-radius: 50%
+      box-shadow: 0 1px 4px color($fontColor a(15%))
+      transition: all $transitionSpeed $ease

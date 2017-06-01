@@ -8,12 +8,238 @@ doctype html
     include shared/header.pug
     
     .e-calc
-      .container.text-center
-        .e-calc__heading.e-calc__heading--huge Select your adress
-        .e-calc__postcode
-          .e-calc__input.e-calc__input--postcode
-            label POSTCODE
-            input(type='text' value='SW20 9EE')
+      .container
+        .e-calc__heading.e-calc__heading--huge Switching now will save you up to <span>£142.61</span> a year! 
+        .e-calc__results
+          // filter
+          .e-calc__results__filter
+            .e-calc__results__filter__head Filter results
+            // group
+            .e-calc__results__filter__group
+              label Show only
+              .e-calc__checkboxes
+                .e-calc__checkbox.e-calc__checkbox--filter
+                  input(type='radio' name='question_1' id='question_1_1' checked )
+                  label(for='question_1_1')
+                    span Electrisity and Gas
+                .e-calc__checkbox.e-calc__checkbox--filter
+                  input(type='radio' name='question_1' id='question_1_2')
+                  label(for='question_1_2')
+                    span Gas only    
+                .e-calc__checkbox.e-calc__checkbox--filter
+                  input(type='radio' name='question_1' id='question_1_3' )
+                  label(for='question_1_3')
+                    span Electrisity only
+            // group
+            .e-calc__results__filter__group
+              label Fixed only
+              .e-calc__toggler.right
+                .e-calc__toggler__text Yes
+                .e-calc__toggler__box
+                .e-calc__toggler__text No
+            // group
+            .e-calc__results__filter__group
+              label Green friendly only:
+              .e-calc__toggler.right
+                .e-calc__toggler__text Yes
+                .e-calc__toggler__box
+                .e-calc__toggler__text No      
+            // group
+            .e-calc__results__filter__group
+              label Switch today plans only:
+              .e-calc__toggler.right
+                .e-calc__toggler__text Yes
+                .e-calc__toggler__box
+                .e-calc__toggler__text No  
+            
+            .e-calc__results__filter__benefits
+              .e-calc__results__filter__benefits__head Why Simply Switch
+              span - We are 100% free and impartial
+              span - We are accredited by Ofgem
+              span - We have a team of energy experts who can help you with your application
+              span - Quick, easy and save up to £142.61 in just five minutes.
+                
+          // CARDS
+          .e-calc__results__cards
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+                  
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown  
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+                  
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown  
+          
 
 
       .e-calc__steps

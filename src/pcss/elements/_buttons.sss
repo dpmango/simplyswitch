@@ -23,3 +23,10 @@
       min-width: 260px
       &:hover
         background: $colorPrimary
+    &--progress
+      background: $colorAcent
+      color: white
+      padding: 8px 50px
+      &.disabled
+        background: color($colorAcent a(50%))
+        cursor: not-allowed

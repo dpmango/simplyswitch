@@ -4,16 +4,16 @@ $(document).ready(function(){
   const _document = $(document);
 
  	// Prevent # behavior
-	$('[href="#"]').click((e) => {
+	$('[href="#"]').click(function(e) {
 		e.preventDefault();
 	});
 
 	// Smoth scroll
-	$('a[href^="#section"]').click(() => {
-        var el = $(this).attr('href');
-        $('body, html').animate({
-            scrollTop: $(el).offset().top}, 1000);
-        return false;
+	$('a[href^="#section"]').click(function() {
+    var el = $(this).attr('href');
+    $('body, html').animate({
+        scrollTop: $(el).offset().top}, 1000);
+    return false;
 	});
 
   // INPUT FOCUS
@@ -41,7 +41,36 @@ $(document).ready(function(){
     $('.e-calc__options').removeClass('selected');
   });
 
+  // STEP 2
+  $('.disabled').on('click', function(e){
+    e.preventDefault();
+  });
 
+
+  // UI
+
+  // checkbox click
+  $('.e-calc__checkbox').on('click', function(){
+      var inputVal = $(this).find('input');
+
+      // reset all active classes if this is radio
+      if ( $(this).find('input').is(':radio') ){
+        $(this).parent().find('.e-calc__checkbox').removeClass('selected');
+      }
+
+      if ( inputVal.is(':checked') ) {
+        $(this).addClass('selected')
+      } else {
+        $(this).removeClass('selected');
+      }
+  });
+
+
+  // checkbox populate classes
+  $('.e-calc__checkbox').find('input:checked').parent().addClass('selected');
+  // if ( $('.e-calc__checkbox').find('input').is(':checked') ){
+  //   $(this).addClass('selected');
+  // }
 
   // Masked input
   $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});

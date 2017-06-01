@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(function () {
-  var _this = this;
 
   var _window = $(window);
   var _document = $(document);
@@ -13,7 +12,7 @@ $(document).ready(function () {
 
   // Smoth scroll
   $('a[href^="#section"]').click(function () {
-    var el = $(_this).attr('href');
+    var el = $(this).attr('href');
     $('body, html').animate({
       scrollTop: $(el).offset().top }, 1000);
     return false;
@@ -41,6 +40,35 @@ $(document).ready(function () {
   $('.js-eCalcWrongPostcode').on('click', function () {
     $('.e-calc__options').removeClass('selected');
   });
+
+  // STEP 2
+  $('.disabled').on('click', function (e) {
+    e.preventDefault();
+  });
+
+  // UI
+
+  // checkbox click
+  $('.e-calc__checkbox').on('click', function () {
+    var inputVal = $(this).find('input');
+
+    // reset all active classes if this is radio
+    if ($(this).find('input').is(':radio')) {
+      $(this).parent().find('.e-calc__checkbox').removeClass('selected');
+    }
+
+    if (inputVal.is(':checked')) {
+      $(this).addClass('selected');
+    } else {
+      $(this).removeClass('selected');
+    }
+  });
+
+  // checkbox populate classes
+  $('.e-calc__checkbox').find('input:checked').parent().addClass('selected');
+  // if ( $('.e-calc__checkbox').find('input').is(':checked') ){
+  //   $(this).addClass('selected');
+  // }
 
   // Masked input
   $("#date").mask("99/99/9999", { placeholder: "mm/dd/yyyy" });

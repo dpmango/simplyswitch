@@ -8,13 +8,122 @@ doctype html
     include shared/header.pug
     
     .e-calc
-      .container.text-center
-        .e-calc__heading.e-calc__heading--huge Select your adress
-        .e-calc__postcode
-          .e-calc__input.e-calc__input--postcode
-            label POSTCODE
-            input(type='text' value='SW20 9EE')
-
+      .e-calc__promo#sectionTop
+        .container
+          .e-calc__promo__title DID YOU KNOW?
+          .e-calc__promo__text Avarage SimplySwitch consumer <span>Save £390</span> or more yearly *<br> Current combined spend for gas and electricity are between £84 and £6869. <span>Get quote now</span> by answering questions below
+      
+      .container
+        // question
+        .e-calc__question
+          .e-calc__heading - What would you like to compare?
+          .e-calc__checkboxes
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_1' id='question_1_1')
+              label(for='question_1_1')
+                i.icon.icon-gaselectr
+                span Gas & Electricity
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_1' id='question_1_2')
+              label(for='question_1_2')
+                i.icon.icon-gas
+                span Gas
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_1' id='question_1_3')
+              label(for='question_1_3')
+                i.icon.icon-electr
+                span Electricity
+        
+        // question
+        .e-calc__question
+          .e-calc__heading - Are your Gas & Electricity tariffs with the same supplier?
+          .e-calc__checkboxes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_2' id='question_2_1' checked)
+              label(for='question_2_1')
+                i.icon.icon-yes
+                span Yes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_2' id='question_2_2')
+              label(for='question_2_2')
+                i.icon.icon-no
+                span No
+      
+        // question
+        .e-calc__question
+          .e-calc__heading - Please tell us your gas and electricity supplier
+          .e-calc__checkboxes
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_1')
+              label(for='question_3_1')
+                img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                span British Gas
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_2')
+              label(for='question_3_2')
+                img(src='images/logos/eon.png' srcset='images/logos/eon@2x.png 2x')
+                span E.ON
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_3')
+              label(for='question_3_3')
+                img(src='images/logos/edf.png' srcset='images/logos/edf@2x.png 2x')
+                span EDF Energy
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_4')
+              label(for='question_3_4')
+                img(src='images/logos/npower.png' srcset='images/logos/npower@2x.png 2x')
+                span NPower
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_5')
+              label(for='question_3_5')
+                img(src='images/logos/spower.png' srcset='images/logos/spower@2x.png 2x')
+                span ScottishPower
+            .e-calc__checkbox.e-calc__checkbox--vertical
+              input(type='radio' name='question_3' id='question_3_6')
+              label(for='question_3_6')
+                img(src='images/logos/sse.png' srcset='images/logos/sse@2x.png 2x')
+                span SSE
+      
+        // question
+        .e-calc__question
+          .e-calc__heading - Are you in arrears with your current supplier?
+          .e-calc__checkboxes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_5' id='question_5_1' )
+              label(for='question_4_1')
+                i.icon.icon-yes
+                span Yes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_5' id='question_5_2')
+              label(for='question_5_2')
+                i.icon.icon-no
+                span No
+      
+        // question
+        .e-calc__question
+          .e-calc__heading - Does your current tariff include an Economy 7 deal?
+          .e-calc__checkboxes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_5' id='question_5_1' )
+              label(for='question_4_1')
+                i.icon.icon-yes
+                span Yes
+            .e-calc__checkbox.e-calc__checkbox--yesno
+              input(type='radio' name='question_5' id='question_5_2')
+              label(for='question_5_2')
+                i.icon.icon-no
+                span No
+              
+              
+      // Progress indicator
+      .e-calc__progress
+        .container
+          .e-calc__progress__counter 2 / 10 answered
+          .e-calc__progress__actions
+            a(href='#sectionTop')
+              i.icon.icon-up
+            a(href='step2.html').e-calc__btn.e-calc__btn--progress.disabled.js-toggleStep See Results
+          
 
       include shared/steps.pug
           

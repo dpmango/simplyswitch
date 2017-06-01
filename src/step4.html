@@ -1,0 +1,45 @@
+<!DOCTYPE html><!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+<head>
+  <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Site name</title>
+  <!--build:css css/styles.css-->
+  <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!--endbuild-->
+  <meta name="description" content=""><!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body>
+  <!-- HEADER::START-->
+  <div class="e-calc">
+    <div class="container text-center">
+      <div class="e-calc__heading e-calc__heading--huge">Select your adress</div>
+      <div class="e-calc__postcode">
+        <div class="e-calc__input e-calc__input--postcode">
+          <label>POSTCODE</label>
+          <input type="text" value="SW20 9EE">
+        </div>
+      </div>
+    </div>
+    <div class="e-calc__steps">
+      <div class="e-calc__steps__box">
+        <div class="e-calc__step active" data-step="1">Location</div>
+        <div class="e-calc__step" data-step="2">Current use</div>
+        <div class="e-calc__step" data-step="3">Compare</div>
+        <div class="e-calc__step" data-step="4">Apply</div>
+      </div>
+    </div>
+  </div>
+  <!-- SCRIPTS-->
+  <!--build:js js/scripts.min.js-->
+  <script src="components/jquery/dist/jquery.min.js"></script>
+  <script src="js/libs/jquery.maskedinput.min.js"></script>
+  <script src="js/libs/jquery.hidensick.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--endbuild-->
+</body>

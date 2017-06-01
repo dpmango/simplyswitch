@@ -20,13 +20,26 @@ $(document).ready(function () {
   });
 
   // INPUT FOCUS
-
-  $('.e-calc__input input').focusin(function () {
+  $('.e-calc input').focusin(function () {
     $(this).parent().addClass('focused');
   });
 
-  $('.e-calc__input input').focusout(function () {
+  $('.e-calc input').focusout(function () {
     $(this).parent().removeClass('focused');
+  });
+
+  // POSTCODE SEARCH
+  $('.js-hideseek').hideseek({});
+
+  // POSTCODE SELECT ACTION
+  $('.e-calc__options__list li').on('click', function () {
+    var selectedAdress = $(this).text();
+    $('.e-calc__options').addClass('selected');
+    $('.js-eCalcSelectedAdress').text(selectedAdress);
+  });
+
+  $('.js-eCalcWrongPostcode').on('click', function () {
+    $('.e-calc__options').removeClass('selected');
   });
 
   // Masked input

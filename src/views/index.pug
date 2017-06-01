@@ -14,5 +14,61 @@ doctype html
           .e-calc__input.e-calc__input--postcode
             label POSTCODE
             input(type='text' value='SW20 9EE')
-
+      
+      .container
+        .e-calc__options
+          .e-calc__options__search
+            i.icon.icon-search
+            input.js-hideseek(data-list='.e-calc__options__list' autocomplete='off' type='text' placeholder='SEARCH STREET OR HOUSE NUMBER')
+          ul.e-calc__options__list
+            li 42, ELM WALK, LONDON, SW20 9EE
+            li 44, ELM WALK, LONDON, SW20 9EE
+            li 46, ELM WALK, LONDON, SW20 9EE
+            li 48, ELM WALK, LONDON, SW20 9EE
+            li 49, ELM WALK, LONDON, SW20 9EE
+            li 50, ELM WALK, LONDON, SW20 9EE
+            li 51, ELM WALK, LONDON, SW20 9EE
+            li 52, ELM WALK, LONDON, SW20 9EE
+            li 53, ELM WALK, LONDON, SW20 9EE
+            li 54, ELM WALK, LONDON, SW20 9EE
+            li 54A, GROUND FLOOR, ELM WALK, LONDON, SW20 9EE
+            li 54A, ELM WALK, LONDON, SW20 9EE
+            li 55, ELM WALK, LONDON, SW20 9EE
+            li 56, ELM WALK, LONDON, SW20 9EE
+            li 57, ELM WALK, LONDON, SW20 9EE
+            li 58, ELM WALK, LONDON, SW20 9EE
+            li 59, ELM WALK, LONDON, SW20 9EE
+            li 60, ELM WALK, LONDON, SW20 9EE
+            li 61, ELM WALK, LONDON, SW20 9EE
+            li 62, ELM WALK, LONDON, SW20 9EE
+            li 63, ELM WALK, LONDON, SW20 9EE
+            li 64, ELM WALK, LONDON, SW20 9EE
+            li 65, ELM WALK, LONDON, SW20 9EE
+            li 66, ELM WALK, LONDON, SW20 9EE
+            li 67, ELM WALK, LONDON, SW20 9EE
+            li 68, ELM WALK, LONDON, SW20 9EE
+            li 69, GROUND FLOOR, ELM WALK, LONDON, SW20 9EE
+            li 69, ELM WALK, LONDON, SW20 9EE
+            li 70, ELM WALK, LONDON, SW20 9EE
+            li 71, ELM WALK, LONDON, SW20 9EE
+            li 72, ELM WALK, LONDON, SW20 9EE
+            li 73, ELM WALK, LONDON, SW20 9EE
+            li 74, ELM WALK, LONDON, SW20 9EE
+            li 75, ELM WALK, LONDON, SW20 9EE
+            li 76, ELM WALK, LONDON, SW20 9EE
+            li 77, ELM WALK, LONDON, SW20 9EE
+            li 78, ELM WALK, LONDON, SW20 9EE
+            li 79, ELM WALK, LONDON, SW20 9EE
+            li 81, ELM WALK, LONDON, SW20 9EE
+            li 83, ELM WALK, LONDON, SW20 9EE
+          
+        .e-calc__options__confirmation
+          .e-calc__options__confirmation__box
+            .e-calc__small-label My adress is:
+            .e-calc__options__confirmation__selection.js-eCalcSelectedAdress 49, ELM WALK, LONDON, SW20 9EE
+        
+          a(href='#').e-calc__btn.e-calc__btn--primary.js-toggleStep Correct! Continue
+          a(href='#').e-calc__options__confirmation__back.js-eCalcWrongPostcode 
+            span Whhops, this is wrong adress!
+            
     include shared/footer.pug

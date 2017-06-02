@@ -47,7 +47,7 @@ gulp.task('watch', function(){
   //gulp.watch('./src/sass/**/*.+(scss|sass)', ['sass']);
   gulp.watch('./src/pcss/**/*.+(sss|css)', ['postcss']);
   gulp.watch('./src/views/**/*.pug', ['pug-watch']);
-  gulp.watch('./src/*.html', browserSync.reload);
+  // gulp.watch('./src/*.html', browserSync.reload);
   gulp.watch('./src/js/es2015/*.js', ['babel']);
   gulp.watch('./src/js/**/*.js', browserSync.reload);
 })

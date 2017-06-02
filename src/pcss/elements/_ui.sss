@@ -4,11 +4,19 @@
 .e-calc__checkboxes
   display: flex
   flex-wrap: wrap
+  &--hasmany
+    margin-left: -15px
+    margin-right: -15px
+    .e-calc__checkbox
+      margin-left: 15px
+      margin-right: 15px
   &--vertical
     .e-calc__checkbox
       flex: 0 1 360px
       margin-top: 15px
       text-align: left
+      &:last-child
+        margin-right: 35px
       label
         padding: 15px 10px
         padding-left: 35px
@@ -28,6 +36,8 @@
   text-align: center
   font-size: 18px
   transition: all $transitionSpeed $ease
+  &:last-child
+    margin-right: 0
   &--vertical
     height: 110px
     display: flex
@@ -214,3 +224,113 @@
       border-radius: 50%
       box-shadow: 0 1px 4px color($fontColor a(15%))
       transition: all $transitionSpeed $ease
+
+
+@media($tablet)
+  .e-calc__checkboxes
+    &--hasmany
+      margin-left: -10px
+      margin-right: -10px
+      .e-calc__checkbox
+        margin-left: 10px
+        margin-right: 10px
+    &--vertical
+      .e-calc__checkbox
+        &:last-child
+          margin-right: 25px
+        label
+          padding: 12px 10px
+          padding-left: 25px
+
+
+  .e-calc__checkbox
+    flex: 0 1 190px
+    margin-right: 25px
+    background: white
+    font-size: 16px
+
+    &--vertical
+      height: 95px
+      .e-calc__checkbox
+      label
+        .icon, img
+          margin-bottom: 15px
+
+    &--yesno
+      label
+        padding: 12px 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        .icon
+          margin-right: 20px
+          transform: scale(.85)
+        span
+          margin-bottom: -2px
+    &--cta
+      label
+        padding: 12px 35px
+    label
+      span
+        display: block
+        font-style: 16px
+        cursor: pointer
+
+  // select
+  .e-calc__select
+    &__box
+      position: relative
+      max-width: 100%
+    &__visible
+      padding: 12px 25px
+      cursor: pointer
+      .icon
+        right: 15px
+
+    &__dropdown
+      top: 50px
+      span
+        padding: 10px 25px
+
+  .e-calc__toggler
+    &.right
+      .e-calc__toggler__box
+        &::after
+          transform: translate3d(23px,0,0)
+
+    &__text
+      font-size: 13px
+      &:first-child
+        margin-right: 5px
+      &:last-child
+        margin-left: 5px
+    &__box
+      size: 45px 21px
+      &::after
+        size: 17px
+
+@media(width <= 670px)
+  .e-calc__checkbox
+    flex-basis: 160px
+    &--vertical
+      label
+        font-size: 14px
+        img, .icon
+          transform: scale(.75)
+          margin-bottom: 10px
+
+@media($mobile)
+  .e-calc__checkboxes
+    &--vertical
+      .e-calc__checkbox
+        margin-right: 0px
+        &:last-child
+          margin-right: 0px
+  .e-calc__checkbox
+    flex-basis: 150px
+    margin-top: 15px
+    &:last-child
+      margin-right: 25px
+  .e-calc__select
+    &__box
+      max-width: 280px

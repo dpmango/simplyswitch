@@ -13,6 +13,13 @@ doctype html
           .e-calc__promo__title DID YOU KNOW?
           .e-calc__promo__text Avarage SimplySwitch consumer <span>Save £390</span> or more yearly *<br> Current combined spend for gas and electricity are between £84 and £6869. <span>Get quote now</span> by answering questions below
       
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='index.html').e-calc__step(data-step='1') Location
+          a(href='#').e-calc__step(data-step='2').active Current use
+          a(href='step3.html').e-calc__step(data-step='3') Compare
+          a(href='step4.html').e-calc__step(data-step='4') Apply
+        
       .container
         // question
         .e-calc__question
@@ -53,7 +60,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Please tell us your gas and electricity supplier
-          .e-calc__checkboxes
+          .e-calc__checkboxes.e-calc__checkboxes--hasmany
             .e-calc__checkbox.e-calc__checkbox--vertical
               input(type='radio' name='question_3' id='question_3_1')
               label(for='question_3_1')
@@ -122,6 +129,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - How do you pay your electricity bills?
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="top" data-html="true" title="If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.")
             .e-calc__validation 
               i.icon.icon-arrow
               span Please select to continue
@@ -143,7 +151,7 @@ doctype html
                 input(type='radio' name='question_4' id='question_4_4')
                 label(for='question_4_4')
                   span Payment on receipts of Bill    
-            .e-calc__helper 
+            .e-calc__helper
               p If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.
                  
                          
@@ -201,6 +209,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - How much Gas you currently use?
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="top" data-html="true" title="KWH will give you the most accurate quotation. These details can be found on your latest bill. ")
           .e-calc__helper-row
             .e-calc__group
               // input
@@ -225,6 +234,8 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - How much Electrisity you currently use?
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="top" data-html="true" title="If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.")
+        
           .e-calc__helper-row
             .e-calc__group
               // input
@@ -244,10 +255,13 @@ doctype html
                   .e-calc__select__dropdown
                     span(data-value='Monthly') Monthly
                     span(data-value='Yearly') Yearly
-                               
+            .e-calc__helper.e-calc__helper--narrow KWH will give you the most accurate quotation. These details can be found on your latest bill. 
+                           
         // question
         .e-calc__question
           .e-calc__heading - How would you like to pay your new bill?
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="top" data-html="true" title="KWH will give you the most accurate quotation. These details can be found on your latest bill. ")
+        
           .e-calc__helper-row
             .e-calc__checkboxes.e-calc__checkboxes--vertical
               .e-calc__checkbox
@@ -279,7 +293,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Email address:
-            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="right" data-html="true" title="So we can send you details of your switch.")
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="right" data-html="true" title="So we can send you details of your switch.")
           .e-calc__helper-row
             // input
             .e-calc__input.e-calc__input--contact
@@ -290,7 +304,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Phone number:
-            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="right" data-html="true" title="If for any reason you can't complete your comparison, we will be able to call you back and help. We will never sell your details to third parties.")
+            i.icon.icon-tooltip.icon-tooltip--tablet(data-toggle="tooltip" data-placement="right" data-html="true" title="If for any reason you can't complete your comparison, we will be able to call you back and help. We will never sell your details to third parties.")
           .e-calc__helper-row
             // input
             .e-calc__input.e-calc__input--contact
@@ -346,18 +360,12 @@ doctype html
       // Progress indicator
       .e-calc__progress
         .container
-          .e-calc__progress__counter 2 / 10 answered
+          .e-calc__progress__counter <span class='js-eCalcAnswered'>2</span> / 10 <span class='e-calc__progress__counter__tablet'>answered</span>
           .e-calc__progress__actions
             a(href='#sectionTop')
               i.icon.icon-up
             a(href='step2.html').e-calc__btn.e-calc__btn--progress.disabled.js-toggleStep See Results
           
 
-      .e-calc__steps
-        .e-calc__steps__box
-          a(href='index.html').e-calc__step(data-step='1') Location
-          a(href='#').e-calc__step(data-step='2').active Current use
-          a(href='step3.html').e-calc__step(data-step='3') Compare
-          a(href='step4.html').e-calc__step(data-step='4') Apply
-    
+
     include shared/footer.pug

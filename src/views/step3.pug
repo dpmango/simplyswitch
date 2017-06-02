@@ -8,6 +8,13 @@ doctype html
     include shared/header.pug
     
     .e-calc
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='index.html').e-calc__step(data-step='1') Location
+          a(href='step2.html').e-calc__step(data-step='2') Current use
+          a(href='#').e-calc__step.active(data-step='3') Compare
+          a(href='step4.html').e-calc__step(data-step='4') Apply
+        
       .container
         .e-calc__heading.e-calc__heading--huge Switching now will save you up to <span>£142.61</span> a year! 
         .e-calc__results
@@ -898,11 +905,4 @@ doctype html
 
 
 
-      .e-calc__steps
-        .e-calc__steps__box
-          a(href='index.html').e-calc__step(data-step='1') Location
-          a(href='step2.html').e-calc__step(data-step='2') Current use
-          a(href='#').e-calc__step(data-step='3').active Compare
-          a(href='step4.html').e-calc__step(data-step='4') Apply
-    
     include shared/footer.pug

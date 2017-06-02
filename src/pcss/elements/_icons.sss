@@ -68,6 +68,10 @@
     size: 22px
     cursor: pointer
     transition: all $transitionSpeed $ease
+    &--tablet
+      display: none
+      @media($tablet)
+        display: inline-block
     &:hover
       filter: contrast(1.5)
   &-showmore

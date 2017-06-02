@@ -8,6 +8,13 @@ doctype html
     include shared/header.pug
     
     .e-calc
+      .e-calc__steps
+        .e-calc__steps__box
+          a(href='#').e-calc__step(data-step='1').active Location
+          a(href='step2.html').e-calc__step(data-step='2') Current use
+          a(href='step3.html').e-calc__step(data-step='3') Compare
+          a(href='step4.html').e-calc__step(data-step='4') Apply
+          
       .container.text-center
         .e-calc__heading.e-calc__heading--huge Select your adress
         .e-calc__postcode
@@ -70,12 +77,5 @@ doctype html
           a(href='step2.html').e-calc__btn.e-calc__btn--primary.js-toggleStep Correct! Continue
           a(href='#').e-calc__options__confirmation__back.js-eCalcWrongPostcode 
             span Whhops, this is wrong adress!
-      
-      .e-calc__steps
-        .e-calc__steps__box
-          a(href='#').e-calc__step(data-step='1').active Location
-          a(href='step2.html').e-calc__step(data-step='2') Current use
-          a(href='step3.html').e-calc__step(data-step='3') Compare
-          a(href='step4.html').e-calc__step(data-step='4') Apply
     
     include shared/footer.pug

@@ -26,7 +26,7 @@
     <div class="container">
       <div class="e-calc__final">
         <!-- card-->
-        <div class="e-calc__results__card active">
+        <div class="e-calc__results__card">
           <div class="e-calc__results__card__left">
             <div class="e-calc__results__card__name"><img src="images/logos/bgas.png" srcset="images/logos/bgas@2x.png 2x"><span>Bristol Energy Standard Prepayment</span></div>
             <div class="e-calc__results__card__left-bottom">
@@ -40,94 +40,96 @@
             <div class="e-calc__results__card__prediction"><span>You will save</span>
               <div class="e-calc__results__card__prediction__num">£914.11 </div>
             </div>
-            <div class="e-calc__results__card__cta"><a class="e-calc__btn e-calc__btn--primary" href="#">Apply Now</a><a class="js-eCalcBreakdownToggle e-calc__results__card__cta__more" href="#"> <span>hide breakdown</span></a></div>
+            <div class="e-calc__results__card__cta"><a class="e-calc__btn e-calc__btn--primary" href="#">Apply Now</a><a class="js-eCalcBreakdownToggle e-calc__results__card__cta__more" href="#"> <span>calculation breakdown</span></a></div>
           </div>
           <div class="e-calc__results__card__hidden">
-            <table cellspacing="0">
-              <thead>
-                <tr> 
-                  <td>Electricity</td>
-                  <td>Current tariff</td>
-                  <td>New tariff</td>
-                  <td>Savings</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr> 
-                  <td>Standing charge</td>
-                  <td>15.82p / day</td>
-                  <td>21.93p / day</td>
-                  <td class="js-eCalcValueToggable">- £ 37.76</td>
-                </tr>
-                <tr> 
-                  <td>Unit Rate</td>
-                  <td>17.30p / kW/h</td>
-                  <td>11.22p / kW/h</td>
-                  <td> </td>
-                </tr>
-                <tr> 
-                  <td>Projected consumption on <b><i>6,600 kWh</i></b></td>
-                  <td>312.89p / day</td>
-                  <td>202.96p / day</td>
-                  <td class="js-eCalcValueToggable">+ £ 299.82</td>
-                </tr>
-                <tr> 
-                  <td>Discount and additional charges</td>
-                  <td>N/A</td>
-                  <td>N/A</td>
-                  <td> </td>
-                </tr>
-                <tr> 
-                  <td> <b>Total Consumption</b></td>
-                  <td class="js-eCalcValueToggable">£1199.82</td>
-                  <td class="js-eCalcValueToggable">£794.63</td>
-                  <td class="js-eCalcValueToggable">+ £ 259.82</td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- next table -->
-            <table cellspacing="0">
-              <thead>
-                <tr> 
-                  <td>Gas</td>
-                  <td>Current tariff</td>
-                  <td>New tariff</td>
-                  <td>Savings</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr> 
-                  <td>Standing charge</td>
-                  <td>15.82p / day</td>
-                  <td>20.42p / day</td>
-                  <td class="js-eCalcValueToggable">- £ 37.76</td>
-                </tr>
-                <tr> 
-                  <td>Unit Rate</td>
-                  <td>4.36p / kW/h</td>
-                  <td>2.80p / kW/h</td>
-                  <td> </td>
-                </tr>
-                <tr> 
-                  <td>Projected consumption on <b><i>4,600 kWh</i></b></td>
-                  <td>49.99p / day</td>
-                  <td>32.17p / day</td>
-                  <td class="js-eCalcValueToggable">+ £ 299.82</td>
-                </tr>
-                <tr> 
-                  <td>Discount and additional charges</td>
-                  <td>N/A</td>
-                  <td>Dual Fuel Discount </td>
-                  <td> </td>
-                </tr>
-                <tr> 
-                  <td> <b>Total Consumption</b></td>
-                  <td class="js-eCalcValueToggable">£ 240.20</td>
-                  <td class="js-eCalcValueToggable"> £ 165.70</td>
-                  <td class="js-eCalcValueToggable">+ £ 75.82</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scrollbar-dynamic">
+              <table cellspacing="0">
+                <thead>
+                  <tr> 
+                    <td>Electricity</td>
+                    <td>Current tariff</td>
+                    <td>New tariff</td>
+                    <td>Savings</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <td>Standing charge</td>
+                    <td>15.82p / day</td>
+                    <td>21.93p / day</td>
+                    <td class="js-eCalcValueToggable">- £ 37.76</td>
+                  </tr>
+                  <tr> 
+                    <td>Unit Rate</td>
+                    <td>17.30p / kW/h</td>
+                    <td>11.22p / kW/h</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td>Projected consumption on <b><i>6,600 kWh</i></b></td>
+                    <td>312.89p / day</td>
+                    <td>202.96p / day</td>
+                    <td class="js-eCalcValueToggable">+ £ 299.82</td>
+                  </tr>
+                  <tr> 
+                    <td>Discount and additional charges</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td> <b>Total Consumption</b></td>
+                    <td class="js-eCalcValueToggable">£1199.82</td>
+                    <td class="js-eCalcValueToggable">£794.63</td>
+                    <td class="js-eCalcValueToggable">+ £ 259.82</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- next table -->
+              <table cellspacing="0">
+                <thead>
+                  <tr> 
+                    <td>Gas</td>
+                    <td>Current tariff</td>
+                    <td>New tariff</td>
+                    <td>Savings</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <td>Standing charge</td>
+                    <td>15.82p / day</td>
+                    <td>20.42p / day</td>
+                    <td class="js-eCalcValueToggable">- £ 37.76</td>
+                  </tr>
+                  <tr> 
+                    <td>Unit Rate</td>
+                    <td>4.36p / kW/h</td>
+                    <td>2.80p / kW/h</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td>Projected consumption on <b><i>4,600 kWh</i></b></td>
+                    <td>49.99p / day</td>
+                    <td>32.17p / day</td>
+                    <td class="js-eCalcValueToggable">+ £ 299.82</td>
+                  </tr>
+                  <tr> 
+                    <td>Discount and additional charges</td>
+                    <td>N/A</td>
+                    <td>Dual Fuel Discount </td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td> <b>Total Consumption</b></td>
+                    <td class="js-eCalcValueToggable">£ 240.20</td>
+                    <td class="js-eCalcValueToggable"> £ 165.70</td>
+                    <td class="js-eCalcValueToggable">+ £ 75.82</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="e-calc__results__card__hidden__bottom">
               <div class="e-calc__toggler right js-eCalcValueToggle">
                 <div class="e-calc__toggler__text">Monthly</div>

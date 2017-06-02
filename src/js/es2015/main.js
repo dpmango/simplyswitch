@@ -91,6 +91,12 @@ $(document).ready(function(){
     }
   });
 
+  // MObile toggler
+  $('.e-calc__results__filter-toggle').on('click', function(){
+    $(this).next().toggleClass('active');
+    $(this).toggleClass('active');
+  });
+
   /////
   // UI
   /////

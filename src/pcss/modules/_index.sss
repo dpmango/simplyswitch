@@ -456,6 +456,8 @@
     &__filter
       flex: 0 2 265px
       margin-right: 30px
+      &-toggle
+        display: none
       &__head
         font-size: 18px
         padding-bottom: 15px
@@ -483,6 +485,9 @@
     &__cards
       flex: 0 1 710px
     &__card
+      max-width: 710px
+      margin-left: auto
+      margin-right: auto
       display: flex
       flex-wrap: wrap
       background: white
@@ -542,6 +547,8 @@
         .e-calc__btn
           min-width: 0
           max-width: 150px
+          padding-top: 8px
+          padding-bottom: 8px
         &__more
           display: block
           margin-top: 10px
@@ -596,18 +603,30 @@
             &:first-child
               padding-left: 35px
             &:nth-child(2)
-              opacity: 1
-            &:nth-child(3)
-              background: $lightBg
               width: 150px
             &:nth-child(3)
               padding-right: 25px
+              background: $lightBg
               width: 150px
             &:nth-child(4)
               font-weight: 600
               width: 110px
 
           tbody
+            td
+              &:first-child
+                span
+                  background: white
+                  padding-bottom: 2px
+                  padding-right: 5px
+                &::after
+                  display: block
+                  content: ' '
+                  width: calc(100% + 20px)
+                  height: 1px
+                  margin-top: -5px
+                  border-bottom: 1px dashed $borderColor
+
             tr
               &:last-child
                 font-weight: 600
@@ -774,6 +793,31 @@
         padding-left: 25px
 
 
+@media(width <= 1125px)
+  .step-3
+    .e-calc
+      &__steps
+        padding-top: 30px
+        padding-left: 20px
+        padding-right: 20px
+        position: static
+        transform: none
+        display: flex
+        justify-content: center
+        &__box
+          &::after
+            display: none
+      &__step
+        display: inline-block
+        margin-bottom: 0px
+        padding-left: 20px
+        padding-right: 30px
+        &:last-child
+          padding-right: 0
+        &::after
+          right: auto
+          left: 0px
+
 @media($desktop)
   .e-calc
 
@@ -801,6 +845,56 @@
 
     &__question
       padding-right: 0px
+
+@media(width <= 920px)
+  .e-calc
+    &__results
+      display: block
+      &__filter
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0px
+        z-index: 5
+        background: white
+        width: 285px
+        padding: 30px 20px
+        overflow-y: scroll
+        transform: translate3d(-285px, 0, 0)
+        opacity: 0
+        transition: all $transitionSpeed $ease
+        &.active
+          transform: translate3d(0%, 0, 0)
+          opacity: 1
+          box-shadow: 5px 0 10px -2px $black25
+
+        &-toggle
+          display: inline-block
+          position: fixed
+          left: -45px
+          top: 50%
+          transform: translateY(-50%) rotate(90deg)
+          z-index: 5
+          background: $colorPrimary
+          color: white
+          padding: 7px 15px
+          border-top-right-radius: 5px
+          border-top-left-radius: 5px
+          cursor: pointer
+          transition: all $transitionSpeed $ease
+          &:hover
+            opacity: .7
+          &.active
+            transform: translate3d(285px, -50%, 0) rotate(90deg)
+
+        &__head
+          font-size: 18px
+          padding-bottom: 15px
+          border-bottom: 1px solid $black25
+
+        &__benefits
+          display: none
+
 
 @media($tablet)
   .e-calc
@@ -905,6 +999,13 @@
       span
         margin-left: 0
 
+    &__results
+      &__filter
+        .e-calc__checkbox
+          flex-basis: 100%
+          margin-right: 0
+          margin-top: 0
+
 @media(width <= 665px)
   .e-calc
     &__more
@@ -914,6 +1015,61 @@
           margin-right: 0px
         &:last-child
           margin-left: 0px
+
+@media(width <= 640px)
+  .e-calc
+    &__results
+      &__card
+        padding: 0px 15px 0px 20px
+        &__left
+          flex-basis: 60%
+
+        &__prediction
+          span
+            margin-bottom: 0px
+          &__num
+            font-size: 24px
+            margin-bottom: 15px
+
+        &__cta
+          .e-calc__btn
+            max-width: 130px
+            padding-left: 10px
+            padding-right: 10px
+
+        &__right
+          flex-basis: 40%
+          flex-direction: column
+
+        &__hidden
+          margin-left: -20px
+          margin-right: -20px
+          table
+            thead
+              td
+                font-size: 13px
+            tbody
+              td
+                &:first-child
+                  &::after
+                    display: none
+            td
+              padding-left: 10px
+              padding-right: 10px
+              &:first-child
+                padding-left: 20px
+              &:nth-child(2)
+                width: 110px
+              &:nth-child(3)
+                padding-right: 15px
+                width: 110px
+              &:nth-child(4)
+                width: 90px
+
+
+          &__bottom
+            padding: 15px 25px 15px 20px
+
 
 @media($mobile)
   .e-calc
@@ -975,6 +1131,33 @@
           margin-top: 35px
           margin-bottom: 35px
 
+    &__results
+      display: block
+      &__filter
+        position: fixed
+        &-toggle
+          font-size: 16px
+
+@media(width <= 450px)
+  .e-calc
+    &__results
+      &__card
+        overflow: hidden
+        &__left
+          flex-basis: 100%
+          padding-right: 0
+        &__right
+          flex-basis: 100%
+          border-left: 0
+          padding-left: 0
+          padding-top: 0
+        &__hidden
+          overflow-x: scroll
+          table
+            width: 410px
+            overflow-x: scroll
+
+
 @media($mobile-s)
   .e-calc
     &__heading
@@ -993,6 +1176,16 @@
       padding: 15px 0
       &-title
         font-size: 18px
+    &__results
+      &__card
+        &__hidden
+          &__bottom
+            flex-direction: column
+            align-items: flex-start
+            padding-top: 10px
+            padding-bottom: 10px
+            &-terms
+              margin-top: 10px
 
 // global helpers
 .text-center

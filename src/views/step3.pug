@@ -36,6 +36,7 @@ doctype html
               .e-calc__toggler.right
                 .e-calc__toggler__text Yes
                 .e-calc__toggler__box
+                  input(type='hidden' value='')
                 .e-calc__toggler__text No
             // group
             .e-calc__results__filter__group
@@ -43,6 +44,7 @@ doctype html
               .e-calc__toggler.right
                 .e-calc__toggler__text Yes
                 .e-calc__toggler__box
+                  input(type='hidden' value='')
                 .e-calc__toggler__text No      
             // group
             .e-calc__results__filter__group
@@ -50,6 +52,7 @@ doctype html
               .e-calc__toggler.right
                 .e-calc__toggler__text Yes
                 .e-calc__toggler__box
+                  input(type='hidden' value='')
                 .e-calc__toggler__text No  
             
             .e-calc__results__filter__benefits
@@ -83,6 +86,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+                
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -105,7 +190,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
-                  
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -128,28 +294,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
-            // card
-            .e-calc__results__card
-              .e-calc__results__card__left
-                .e-calc__results__card__name
-                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
-                  span Bristol Energy Standard Prepayment
-                .e-calc__results__card__left-bottom
-                  .e-calc__results__card__features
-                    span - Variable rate
-                    span - No exit fee
-                  .e-calc__results__card__personal
-                    span Personal rate
-                    .e-calc__results__card__personal__num £914.11 
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
                     
-              .e-calc__results__card__right
-                .e-calc__results__card__prediction
-                  span You will save
-                  .e-calc__results__card__prediction__num £914.11 
-                .e-calc__results__card__cta
-                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
-                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
-                    span calculation breakdown  
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+                
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -172,6 +398,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions      
+            
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -194,7 +502,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
-                  
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+                
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -217,6 +606,88 @@ doctype html
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
                     span calculation breakdown
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+
             // card
             .e-calc__results__card
               .e-calc__results__card__left
@@ -238,8 +709,193 @@ doctype html
                 .e-calc__results__card__cta
                   a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                   a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
-                    span calculation breakdown  
-          
+                    span calculation breakdown
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions
+                
+            // card
+            .e-calc__results__card
+              .e-calc__results__card__left
+                .e-calc__results__card__name
+                  img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                  span Bristol Energy Standard Prepayment
+                .e-calc__results__card__left-bottom
+                  .e-calc__results__card__features
+                    span - Variable rate
+                    span - No exit fee
+                  .e-calc__results__card__personal
+                    span Personal rate
+                    .e-calc__results__card__personal__num £914.11 
+                    
+              .e-calc__results__card__right
+                .e-calc__results__card__prediction
+                  span You will save
+                  .e-calc__results__card__prediction__num £914.11 
+                .e-calc__results__card__cta
+                  a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
+                  a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
+                    span calculation breakdown
+              .e-calc__results__card__hidden
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Electricity
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 21.93p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 17.30p / kW/h
+                      td 11.22p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>6,600 kWh</i></b>
+                      td 312.89p / day
+                      td 202.96p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td N/A
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £1199.82
+                      td.js-eCalcValueToggable £794.63
+                      td.js-eCalcValueToggable + £ 259.82
+                
+                // next table 
+                table(cellspacing='0')
+                  thead
+                    tr 
+                      td Gas
+                      td Current tariff
+                      td New tariff
+                      td Savings
+                  tbody
+                    tr 
+                      td Standing charge
+                      td 15.82p / day
+                      td 20.42p / day
+                      td.js-eCalcValueToggable - £ 37.76
+                    tr 
+                      td Unit Rate
+                      td 4.36p / kW/h
+                      td 2.80p / kW/h
+                      td 
+                    tr 
+                      td Projected consumption on <b><i>4,600 kWh</i></b>
+                      td 49.99p / day
+                      td 32.17p / day
+                      td.js-eCalcValueToggable + £ 299.82
+                    tr 
+                      td Discount and additional charges
+                      td N/A
+                      td Dual Fuel Discount 
+                      td 
+                    tr 
+                      td 
+                        b Total Consumption
+                      td.js-eCalcValueToggable £ 240.20
+                      td.js-eCalcValueToggable  £ 165.70
+                      td.js-eCalcValueToggable + £ 75.82
+                
+                .e-calc__results__card__hidden__bottom
+                  .e-calc__toggler.right.js-eCalcValueToggle
+                    .e-calc__toggler__text Monthly
+                    .e-calc__toggler__box
+                      input(type='hidden' value='')
+                    .e-calc__toggler__text Yerly
+                    
+                  .e-calc__results__card__hidden__bottom-terms
+                    a(href='#') terms and defenitions      
+
 
 
       .e-calc__steps

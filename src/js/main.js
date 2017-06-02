@@ -64,6 +64,27 @@ $(document).ready(function () {
     }
   });
 
+  // STEP 3
+  /////////
+
+  // toggle card breakdown
+  $('.js-eCalcBreakdownToggle').on('click', function () {
+    var toggleLabel = $(this).find('span');
+
+    $(this).closest('.e-calc__results__card').toggleClass('active');
+
+    if (toggleLabel.text() == 'calculation breakdown') {
+      toggleLabel.text('hide breakdown');
+    } else {
+      toggleLabel.text('calculation breakdown');
+    }
+  });
+
+  // VALUE TOGGLER
+  $('.js-eCalcValueToggle').on('click', function () {
+    if ($(this).is('.left')) {} else if ($(this).is('.left')) {}
+  });
+
   /////
   // UI
   /////
@@ -95,9 +116,6 @@ $(document).ready(function () {
 
   // checkbox populate classes
   $('.e-calc__checkbox').find('input:checked').parent().addClass('selected');
-  // if ( $('.e-calc__checkbox').find('input').is(':checked') ){
-  //   $(this).addClass('selected');
-  // }
 
   // select
   $('.e-calc__select__visible').on('click', function () {
@@ -118,8 +136,19 @@ $(document).ready(function () {
     var parentObj = $(this).parent();
     if (parentObj.is('.right')) {
       parentObj.removeClass('right').addClass('left');
+      parentObj.find('input').val('0');
     } else if (parentObj.is('.left')) {
       parentObj.removeClass('left').addClass('right');
+      parentObj.find('input').val('1');
+    }
+  });
+
+  // toggler populate inputs
+  $('.e-calc__toggler').each(function (i, val) {
+    if ($(val).is('.left')) {
+      $(this).find('input').val('0');
+    } else if ($(val).is('.right')) {
+      $(this).find('input').val('1');
     }
   });
 

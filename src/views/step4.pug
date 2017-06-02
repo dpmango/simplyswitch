@@ -47,7 +47,23 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - How long have you lived at this address?
-        
+          .e-calc__group.e-calc__group--lived
+            .e-calc__input.e-calc__input--number
+              label YEARS
+              input(type='text' placeholder='0' maxlength='2')
+              i.icon.icon-minus
+              i.icon.icon-plus
+            .e-calc__group__sep and
+            .e-calc__input.e-calc__input--number
+              label MONTHS
+              input(type='text' placeholder='0' maxlength='2')
+              i.icon.icon-minus
+              i.icon.icon-plus
+            .e-calc__lived
+              | Your address is
+              span 49, ELM WALK, LONDON, SW20 9EE
+                
+              
         // question
         .e-calc__question
           .e-calc__heading - Do you have a different billing address?

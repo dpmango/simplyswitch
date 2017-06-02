@@ -126,6 +126,27 @@ $(document).ready(function(){
     }
   });
 
+  // NUMERIC INPUT
+
+  $('.e-calc__input--number .icon').on('click', function(e){
+  var element = $(this).parent().find('input');
+  var currentValue = parseInt($(this).parent().find('input').val()) || 0;
+
+  if( $(this).is('.icon-minus') ){
+    if(currentValue <= 1){
+      return false;
+    }else{
+      element.val( currentValue - 1 );
+    }
+  } else{
+    if(currentValue >= 10){
+      return false;
+    } else{
+      element.val( currentValue + 1 );
+    }
+  }
+});
+
   // editable field
   $('.e-calc__editable__edit').on('click', function(){
     $(this).parent().addClass('active');

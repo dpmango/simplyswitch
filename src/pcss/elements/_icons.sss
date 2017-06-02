@@ -76,3 +76,21 @@
   &-arrow
     background-image: svg-load('../../images/svg/arrow.svg', fill=tomato)
     size: 25px 20px
+
+  &-minus
+    background-image: svg-load('../../images/svg/minus.svg')
+    size: 18px
+    cursor: pointer
+    opacity: .5
+    transition: all $transitionSpeed $ease
+    &:hover
+      opacity: 1
+
+  &-plus
+    background-image: svg-load('../../images/svg/plus.svg')
+    size: 18px
+    cursor: pointer
+    opacity: .5
+    transition: all $transitionSpeed $ease
+    &:hover
+      opacity: 1

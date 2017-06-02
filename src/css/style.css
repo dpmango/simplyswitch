@@ -456,6 +456,34 @@ body, html {
     height: 20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='340.533px' height='340.533px' viewBox='0 0 340.533 340.533' style='enable-background:new 0 0 340.533 340.533;' xml:space='preserve' fill='tomato'%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Cpath d='M145.768,290.197c-6.137,0-12.25-5.831-13.412-7.002c-4.194-3.092-115.082-86.691-127.269-98.856 c-4.422-4.444-5.203-8.894-5.074-11.856c0.288-7.089,5.768-11.935,6.389-12.463L129.738,57.946 c1.351-1.474,7.617-7.611,13.577-7.611c2.717,0,9.031,1.243,9.031,12.691v52.623H326.47c0.486-0.081,1.135-0.156,1.903-0.156 c2.03,0,12.16,0.774,12.16,15.976v80.87c0,11.187-7.927,14.153-12.118,14.153H156.012v48.23 C156.012,288.191,149.593,290.197,145.768,290.197z M145.768,280.451v4.87V280.451L145.768,280.451z'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
+.icon-minus {
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='18px' height='18px' viewBox='0 0 18 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eminus%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.704370471'%3E %3Cg id='4.-Apply' transform='translate(-585.000000, -1070.000000)' fill-rule='nonzero' fill='%23262626'%3E %3Cg id='body' transform='translate(0.000000, 85.000000)'%3E %3Cg id='home' transform='translate(0.000000, 786.000000)'%3E %3Cg id='Group-2' transform='translate(229.000000, 125.000000)'%3E %3Cg id='question-copy-7'%3E %3Cg id='input-number' transform='translate(256.000000, 53.000000)'%3E %3Cpath d='M117.009842,21.9901422 C116.349942,21.3300885 115.554877,21 114.625262,21 L103.375026,21 C102.445411,21 101.650345,21.3300885 100.990158,21.9901422 C100.330094,22.6503191 100,23.4453307 100,24.3749718 L100,35.6249051 C100,36.554464 100.330094,37.3495577 100.990158,38.0097346 C101.650345,38.6699115 102.445411,39 103.375026,39 L114.625139,39 C115.554753,39 116.349819,38.6699115 117.009719,38.0097346 C117.669906,37.3495577 118,36.5545051 118,35.6249051 L118,24.3749718 C117.999959,23.4453307 117.669865,22.650196 117.009842,21.9901422 Z M115.000178,30.749923 C115.000178,30.9530165 114.925843,31.1290199 114.777666,31.2772354 C114.629038,31.4255741 114.453196,31.5000308 114.250058,31.5000308 L103.749983,31.5000308 C103.546886,31.5000308 103.371167,31.4256152 103.222662,31.2772354 C103.07428,31.1290609 103.000027,30.9530576 103.000027,30.749923 L103.000027,29.2498307 C103.000027,29.0467372 103.07428,28.8709391 103.222662,28.7225183 C103.371126,28.5740565 103.546845,28.499805 103.749983,28.499805 L114.250099,28.499805 C114.453196,28.499805 114.629038,28.5740565 114.777707,28.7225183 C114.926007,28.870898 115.000219,29.0466962 115.000219,29.2498307 L115.000219,30.749923 L115.000178,30.749923 Z' id='minus'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.icon-minus:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+.icon-plus {
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='19px' height='19px' viewBox='0 0 19 19' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eplus%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.714673913'%3E %3Cg id='4.-Apply' transform='translate(-645.000000, -1069.000000)' fill-rule='nonzero' fill='%23262626'%3E %3Cg id='body' transform='translate(0.000000, 85.000000)'%3E %3Cg id='home' transform='translate(0.000000, 786.000000)'%3E %3Cg id='Group-2' transform='translate(229.000000, 125.000000)'%3E %3Cg id='question-copy-7'%3E %3Cg id='input-number' transform='translate(256.000000, 53.000000)'%3E %3Cpath d='M177.509927,21.4900967 C176.850027,20.8300429 176.054962,20.4999545 175.125347,20.4999545 L163.875111,20.4999545 C162.945496,20.4999545 162.150431,20.8300429 161.490243,21.4900967 C160.830179,22.1502736 160.500085,22.9452852 160.500085,23.8749263 L160.500085,35.1248596 C160.500085,36.0544185 160.830179,36.8495122 161.490243,37.5096891 C162.150431,38.169866 162.945496,38.4999545 163.875111,38.4999545 L175.125224,38.4999545 C176.054839,38.4999545 176.849904,38.169866 177.509804,37.5096891 C178.169992,36.8495122 178.500085,36.0544596 178.500085,35.1248596 L178.500085,23.8749263 C178.500044,22.9452852 178.169951,22.1501505 177.509927,21.4900967 Z M175.500263,30.2498775 C175.500263,30.452971 175.425929,30.6289744 175.277752,30.7771899 C175.129123,30.9255286 174.953281,30.9999853 174.750144,30.9999853 L171.000407,30.9999853 L171.000407,34.7498262 C171.000407,34.9529197 170.925826,35.1287589 170.777444,35.2771386 C170.629267,35.4257236 170.453302,35.4998929 170.250123,35.4998929 L168.750171,35.4998929 C168.547074,35.4998929 168.371273,35.4257236 168.22285,35.2771386 C168.074386,35.1287999 168.000133,34.9529607 168.000133,34.7498262 L168.000133,30.9999853 L164.250068,30.9999853 C164.046972,30.9999853 163.871253,30.9255697 163.722747,30.7771899 C163.574365,30.6290154 163.500113,30.453012 163.500113,30.2498775 L163.500113,28.7497852 C163.500113,28.5466917 163.574365,28.3708935 163.722747,28.2224728 C163.871212,28.0740109 164.046931,27.9997595 164.250068,27.9997595 L168.000174,27.9997595 L168.000174,24.2498775 C168.000174,24.046743 168.074427,23.8709038 168.222891,23.7225651 C168.371314,23.5740623 168.547074,23.4997698 168.750212,23.4997698 L170.250164,23.4997698 C170.453302,23.4997698 170.629267,23.5740623 170.777485,23.7225651 C170.925826,23.8709038 171.000448,24.046743 171.000448,24.2498775 L171.000448,27.9998006 L174.750185,27.9998006 C174.953281,27.9998006 175.129123,28.074052 175.277793,28.2225138 C175.426093,28.3708935 175.500304,28.5466917 175.500304,28.7498262 L175.500304,30.2498775 L175.500263,30.2498775 Z' id='plus'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.icon-plus:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
 /* buttons */
 .e-calc button {}
 .e-calc button:focus {
@@ -1825,6 +1853,53 @@ body, html {
     text-align: left;
     font-size: 18px;
 }
+.e-calc__input--number {
+    position: relative;
+    max-width: 200px;
+    height: 60px;
+}
+.e-calc__input--number label {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    z-index: 2;
+    color: #2f313a;
+    color: rgba(47, 49, 58, 0.55);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    -webkit-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+            transform: translateY(-45%);
+}
+.e-calc__input--number input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px 32px 15px 118px;
+    border-radius: 4px;
+    color: #2F313A;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.e-calc__input--number .icon-minus, .e-calc__input--number .icon-plus {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.e-calc__input--number .icon-minus {
+    left: 100px;
+}
+.e-calc__input--number .icon-plus {
+    left: 160px;
+}
 .e-calc__input--toggler {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2105,6 +2180,10 @@ body, html {
     padding: 10px 0;
     background: #3179C5;
     color: white;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
 }
 .e-calc__progress > .container {
     display: -webkit-box;
@@ -2254,6 +2333,36 @@ body, html {
 }
 .e-calc__group--user .e-calc__select__box {
     width: 160px;
+}
+.e-calc__group--lived {
+    -webkit-align-items: center;
+            align-items: center;
+    margin-top: 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.e-calc__group--lived .e-calc__input {
+    -webkit-flex: 0 0 200px;
+        -ms-flex: 0 0 200px;
+            flex: 0 0 200px;
+    margin-right: 15px;
+    width: 200px;
+    -webkit-box-flex: 0;
+}
+.e-calc__group__sep {
+    margin-right: 15px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.e-calc__lived {
+    margin-left: 40px;
+    font-size: 14px;
+}
+.e-calc__lived span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
 }
 .e-calc__cta {
     margin-top: 45px;
@@ -2673,6 +2782,13 @@ body, html {
     background: tomato;
     color: white;
     font-size: 14px;
+}
+@media(max-height: 450px) {
+    .e-calc {}
+    .e-calc__progress {
+        -webkit-transform: translate3d(0,100%,0);
+                transform: translate3d(0,100%,0);
+    }
 }
 @media(max-width: 1100px) {
     .e-calc {}

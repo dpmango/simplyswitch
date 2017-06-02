@@ -67,6 +67,9 @@ body, html {
 .e-calc__checkboxes--vertical .e-calc__checkbox:first-child {
     margin-top: 20px;
 }
+.has-error {
+    border-color: tomato;
+}
 .e-calc__checkbox {
     -webkit-flex: 0 1 210px;
         -ms-flex: 0 1 210px;
@@ -167,6 +170,34 @@ body, html {
     padding: 10px 20px;
     font-size: 14px;
 }
+.e-calc__checkbox--toggable {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+}
+.e-calc__checkbox--toggable.visible {
+    position: static;
+    width: auto;
+    height: auto;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0px, 0);
+            transform: translate3d(0, 0px, 0);
+}
+.e-calc__checkbox.js-toggleLogos {}
+.e-calc__checkbox.js-toggleLogos.active {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .5;
+}
+.e-calc__checkbox.js-toggleLogos.active .icon {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+}
 .e-calc__checkbox.selected {
     border-color: #8CC73F;
 }
@@ -232,6 +263,7 @@ body, html {
     top: 60px;
     right: 0;
     left: 0;
+    z-index: 5;
     overflow: hidden;
     max-height: 350px;
     height: 0;
@@ -406,6 +438,23 @@ body, html {
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='22px' height='22px' viewBox='0 0 22 22' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eround%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.490885417'%3E %3Cg id='4.-Apply' transform='translate(-877.000000, -2172.000000)' fill-rule='nonzero' fill='%23262626'%3E %3Cg id='body' transform='translate(0.000000, 85.000000)'%3E %3Cg id='add' transform='translate(0.000000, 1252.000000)'%3E %3Cg id='question-copy-5' transform='translate(228.000000, 829.000000)'%3E %3Cg id='round' transform='translate(649.000000, 6.000000)'%3E %3Cpath d='M11,0 C4.95,0 0,4.95 0,11 C0,17.05 4.95,22 11,22 C17.05,22 22,17.05 22,11 C22,4.95 17.05,0 11,0 Z M12.1,18.7 L9.9,18.7 L9.9,16.5 L12.1,16.5 L12.1,18.7 Z M14.41,10.23 L13.42,11.22 C12.5400431,11.9900431 12.1,12.65 12.1,14.3 L9.9,14.3 L9.9,13.75 C9.9,12.54 10.34,11.44 11.22,10.67 L12.54,9.24 C12.98,8.91 13.2,8.36 13.2,7.7 C13.2,6.49 12.21,5.5 11,5.5 C9.79,5.5 8.8,6.49 8.8,7.7 L6.6,7.7 C6.6,5.28 8.58,3.3 11,3.3 C13.42,3.3 15.4,5.28 15.4,7.7 C15.4,8.69 14.96,9.57 14.41,10.23 Z' id='Shape'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.icon-tooltip:hover {
+    -webkit-filter: contrast(1.5);
+            filter: contrast(1.5);
+}
+.icon-showmore {
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EShape%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='2.-Current-use--scrolled' transform='translate(-805.000000, -562.000000)' fill-rule='nonzero' fill='%233179C5'%3E %3Cg id='body' transform='translate(0.000000, -15.000000)'%3E %3Cg id='question-copy-2' transform='translate(228.000000, 374.000000)'%3E %3Cg id='checkbox-copy-8' transform='translate(491.000000, 188.000000)'%3E %3Cg id='plus-symbol-in-a-rounded-black-square' transform='translate(86.000000, 15.000000)'%3E %3Cpath d='M37.7594533,2.19799544 C36.2945786,0.732756264 34.5296583,0 32.4660592,0 L7.49230068,0 C5.42870159,0 3.66378132,0.732756264 2.19826879,2.19799544 C0.733029613,3.66350797 0.000273348519,5.42833713 0.000273348519,7.49202733 L0.000273348519,32.4655125 C0.000273348519,34.5290205 0.733029613,36.2940319 2.19826879,37.7595444 C3.66378132,39.2250569 5.42870159,39.9578132 7.49230068,39.9578132 L32.4657859,39.9578132 C34.529385,39.9578132 36.2943052,39.2250569 37.75918,37.7595444 C39.2246925,36.2940319 39.9574487,34.5291116 39.9574487,32.4655125 L39.9574487,7.49202733 C39.9573576,5.42833713 39.2246014,3.66323462 37.7594533,2.19799544 Z M33.2983144,21.6436446 C33.2983144,22.0944875 33.133303,22.4851936 32.8043736,22.8142141 C32.4744419,23.143508 32.0841002,23.3087927 31.6331663,23.3087927 L23.3093394,23.3087927 L23.3093394,31.6329841 C23.3093394,32.0838269 23.1437813,32.4741686 22.8143964,32.8035535 C22.485467,33.1333941 22.0948519,33.298041 21.6438269,33.298041 L18.3141686,33.298041 C17.8633257,33.298041 17.4730752,33.1333941 17.1435991,32.8035535 C16.8140319,32.4742597 16.6492027,32.083918 16.6492027,31.6329841 L16.6492027,23.3087927 L8.32464692,23.3087927 C7.8738041,23.3087927 7.48373576,23.1435991 7.15407745,22.8142141 C6.82469248,22.4852847 6.65986333,22.0945786 6.65986333,21.6436446 L6.65986333,18.3136219 C6.65986333,17.862779 6.82469248,17.4725285 7.15407745,17.1430524 C7.48364465,16.8134852 7.87371298,16.648656 8.32464692,16.648656 L16.6492938,16.648656 L16.6492938,8.32437358 C16.6492938,7.87343964 16.814123,7.48309795 17.1436902,7.1538041 C17.4731663,6.82414579 17.8633257,6.65922551 18.3142597,6.65922551 L21.643918,6.65922551 C22.0948519,6.65922551 22.485467,6.82414579 22.8144875,7.1538041 C23.1437813,7.48309795 23.3094305,7.87343964 23.3094305,8.32437358 L23.3094305,16.6487472 L31.6332574,16.6487472 C32.0841002,16.6487472 32.4744419,16.8135763 32.8044647,17.1431435 C33.1336674,17.4725285 33.2984055,17.862779 33.2984055,18.313713 L33.2984055,21.6436446 L33.2983144,21.6436446 Z' id='Shape'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.icon-arrow {
+    width: 25px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='340.533px' height='340.533px' viewBox='0 0 340.533 340.533' style='enable-background:new 0 0 340.533 340.533;' xml:space='preserve' fill='tomato'%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Cpath d='M145.768,290.197c-6.137,0-12.25-5.831-13.412-7.002c-4.194-3.092-115.082-86.691-127.269-98.856 c-4.422-4.444-5.203-8.894-5.074-11.856c0.288-7.089,5.768-11.935,6.389-12.463L129.738,57.946 c1.351-1.474,7.617-7.611,13.577-7.611c2.717,0,9.031,1.243,9.031,12.691v52.623H326.47c0.486-0.081,1.135-0.156,1.903-0.156 c2.03,0,12.16,0.774,12.16,15.976v80.87c0,11.187-7.927,14.153-12.118,14.153H156.012v48.23 C156.012,288.191,149.593,290.197,145.768,290.197z M145.768,280.451v4.87V280.451L145.768,280.451z'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 /* buttons */
 .e-calc button {}
@@ -1587,8 +1636,8 @@ body, html {
     letter-spacing: normal;
     font-weight: 400;
     font-style: normal;
-    font-size: 12px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.42857143;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     opacity: 0;
@@ -1596,8 +1645,8 @@ body, html {
     line-break: auto;
 }
 .tooltip.in {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    opacity: .9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    opacity: .7;
     filter: alpha(opacity = 90);
 }
 .tooltip.top {
@@ -1617,10 +1666,10 @@ body, html {
     padding: 0 5px;
 }
 .tooltip-inner {
-    padding: 3px 8px;
+    padding: 6px 10px;
     max-width: 200px;
     border-radius: 4px;
-    background-color: #000;
+    background-color: #2F313A;
     color: #fff;
     text-align: center;
 }
@@ -1637,56 +1686,56 @@ body, html {
     left: 50%;
     margin-left: -5px;
     border-width: 5px 5px 0;
-    border-top-color: #000;
+    border-top-color: #2F313A;
 }
 .tooltip.top-left .tooltip-arrow {
     right: 5px;
     bottom: 0;
     margin-bottom: -5px;
     border-width: 5px 5px 0;
-    border-top-color: #000;
+    border-top-color: #2F313A;
 }
 .tooltip.top-right .tooltip-arrow {
     bottom: 0;
     left: 5px;
     margin-bottom: -5px;
     border-width: 5px 5px 0;
-    border-top-color: #000;
+    border-top-color: #2F313A;
 }
 .tooltip.right .tooltip-arrow {
     top: 50%;
     left: 0;
     margin-top: -5px;
     border-width: 5px 5px 5px 0;
-    border-right-color: #000;
+    border-right-color: #2F313A;
 }
 .tooltip.left .tooltip-arrow {
     top: 50%;
     right: 0;
     margin-top: -5px;
     border-width: 5px 0 5px 5px;
-    border-left-color: #000;
+    border-left-color: #2F313A;
 }
 .tooltip.bottom .tooltip-arrow {
     top: 0;
     left: 50%;
     margin-left: -5px;
     border-width: 0 5px 5px;
-    border-bottom-color: #000;
+    border-bottom-color: #2F313A;
 }
 .tooltip.bottom-left .tooltip-arrow {
     top: 0;
     right: 5px;
     margin-top: -5px;
     border-width: 0 5px 5px;
-    border-bottom-color: #000;
+    border-bottom-color: #2F313A;
 }
 .tooltip.bottom-right .tooltip-arrow {
     top: 0;
     left: 5px;
     margin-top: -5px;
     border-width: 0 5px 5px;
-    border-bottom-color: #000;
+    border-bottom-color: #2F313A;
 }
 
 /* 3. Modules */
@@ -1706,6 +1755,7 @@ body, html {
 }
 .e-calc__heading .icon-tooltip {
     margin-left: 15px;
+    vertical-align: -2px;
 }
 .e-calc__heading--huge {
     padding-top: 70px;
@@ -2051,6 +2101,7 @@ body, html {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 9;
     padding: 10px 0;
     background: #3179C5;
     color: white;
@@ -2082,6 +2133,7 @@ body, html {
     opacity: .7;
 }
 .e-calc__question {
+    position: relative;
     margin-top: 50px;
     max-width: 950px;
 }
@@ -2605,6 +2657,22 @@ body, html {
     border-bottom: 1px dashed #2F313A;
     font-size: 14px;
     cursor: pointer;
+}
+.e-calc__validation {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: 4px;
+}
+.e-calc__validation .icon {
+    vertical-align: -4px;
+}
+.e-calc__validation span {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: tomato;
+    color: white;
+    font-size: 14px;
 }
 @media(max-width: 1100px) {
     .e-calc {}

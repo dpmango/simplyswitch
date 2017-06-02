@@ -37,7 +37,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Are your Gas & Electricity tariffs with the same supplier?
-            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="top" data-html="true" title="Выживший <br> Вы не смогли помочь заражённым, но покинули город и остались в живых.")
+            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="top" data-html="true" title="If your gas and electricity are on the same plan and from the same supplier please select ‘Yes’")
           .e-calc__checkboxes
             .e-calc__checkbox.e-calc__checkbox--yesno
               input(type='radio' name='question_2' id='question_2_1' checked)
@@ -84,10 +84,47 @@ doctype html
               label(for='question_3_6')
                 img(src='images/logos/sse.png' srcset='images/logos/sse@2x.png 2x')
                 span SSE
+            .e-calc__checkbox.e-calc__checkbox--vertical.js-toggleLogos
+              label(for='question_3_7')
+                i.icon.icon-showmore
+                span Show more
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_1')
+              label(for='question_3_1')
+                img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
+                span British Gas
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_2')
+              label(for='question_3_2')
+                img(src='images/logos/eon.png' srcset='images/logos/eon@2x.png 2x')
+                span E.ON
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_3')
+              label(for='question_3_3')
+                img(src='images/logos/edf.png' srcset='images/logos/edf@2x.png 2x')
+                span EDF Energy
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_4')
+              label(for='question_3_4')
+                img(src='images/logos/npower.png' srcset='images/logos/npower@2x.png 2x')
+                span NPower
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_5')
+              label(for='question_3_5')
+                img(src='images/logos/spower.png' srcset='images/logos/spower@2x.png 2x')
+                span ScottishPower
+            .e-calc__checkbox.e-calc__checkbox--vertical.e-calc__checkbox--toggable
+              input(type='radio' name='question_3' id='question_3_6')
+              label(for='question_3_6')
+                img(src='images/logos/sse.png' srcset='images/logos/sse@2x.png 2x')
+                span SSE
       
         // question
         .e-calc__question
           .e-calc__heading - How do you pay your electricity bills?
+            .e-calc__validation 
+              i.icon.icon-arrow
+              span Please select to continue
           .e-calc__helper-row
             .e-calc__checkboxes.e-calc__checkboxes--vertical
               .e-calc__checkbox
@@ -128,6 +165,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Does your current tariff include an Economy 7 deal?
+            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="top" data-html="true" title="If you're unsure as to whether or not you have Economy 7, take a look at your electricity bill. If you have two different rates, one for night and one for day, then you have Economy 7.")
           .e-calc__checkboxes
             .e-calc__checkbox.e-calc__checkbox--yesno
               input(type='radio' name='question_6' id='question_6_1' )
@@ -241,6 +279,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Email address:
+            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="right" data-html="true" title="So we can send you details of your switch.")
           .e-calc__helper-row
             // input
             .e-calc__input.e-calc__input--contact
@@ -251,6 +290,7 @@ doctype html
         // question
         .e-calc__question
           .e-calc__heading - Phone number:
+            i.icon.icon-tooltip(data-toggle="tooltip" data-placement="right" data-html="true" title="If for any reason you can't complete your comparison, we will be able to call you back and help. We will never sell your details to third parties.")
           .e-calc__helper-row
             // input
             .e-calc__input.e-calc__input--contact

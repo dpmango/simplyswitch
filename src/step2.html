@@ -44,7 +44,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Are your Gas & Electricity tariffs with the same supplier?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="Выживший &lt;br&gt; Вы не смогли помочь заражённым, но покинули город и остались в живых."></i></div>
+        <div class="e-calc__heading">- Are your Gas & Electricity tariffs with the same supplier?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If your gas and electricity are on the same plan and from the same supplier please select ‘Yes’"></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_2" id="question_2_1" checked>
@@ -84,11 +84,40 @@
             <input type="radio" name="question_3" id="question_3_6">
             <label for="question_3_6"><img src="images/logos/sse.png" srcset="images/logos/sse@2x.png 2x"><span>SSE</span></label>
           </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical js-toggleLogos">
+            <label for="question_3_7"><i class="icon icon-showmore"></i><span>Show more</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_1">
+            <label for="question_3_1"><img src="images/logos/bgas.png" srcset="images/logos/bgas@2x.png 2x"><span>British Gas</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_2">
+            <label for="question_3_2"><img src="images/logos/eon.png" srcset="images/logos/eon@2x.png 2x"><span>E.ON</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_3">
+            <label for="question_3_3"><img src="images/logos/edf.png" srcset="images/logos/edf@2x.png 2x"><span>EDF Energy</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_4">
+            <label for="question_3_4"><img src="images/logos/npower.png" srcset="images/logos/npower@2x.png 2x"><span>NPower</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_5">
+            <label for="question_3_5"><img src="images/logos/spower.png" srcset="images/logos/spower@2x.png 2x"><span>ScottishPower</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_6">
+            <label for="question_3_6"><img src="images/logos/sse.png" srcset="images/logos/sse@2x.png 2x"><span>SSE</span></label>
+          </div>
         </div>
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- How do you pay your electricity bills?</div>
+        <div class="e-calc__heading">- How do you pay your electricity bills?
+          <div class="e-calc__validation"> <i class="icon icon-arrow"></i><span>Please select to continue</span></div>
+        </div>
         <div class="e-calc__helper-row">
           <div class="e-calc__checkboxes e-calc__checkboxes--vertical">
             <div class="e-calc__checkbox">
@@ -129,7 +158,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Does your current tariff include an Economy 7 deal?</div>
+        <div class="e-calc__heading">- Does your current tariff include an Economy 7 deal?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If you're unsure as to whether or not you have Economy 7, take a look at your electricity bill. If you have two different rates, one for night and one for day, then you have Economy 7."></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_6" id="question_6_1">
@@ -249,7 +278,7 @@
     <div class="container">
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Email address:</div>
+        <div class="e-calc__heading">- Email address:<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="So we can send you details of your switch."></i></div>
         <div class="e-calc__helper-row">
           <!-- input-->
           <div class="e-calc__input e-calc__input--contact">
@@ -260,7 +289,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Phone number:</div>
+        <div class="e-calc__heading">- Phone number:<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="right" data-html="true" title="If for any reason you can't complete your comparison, we will be able to call you back and help. We will never sell your details to third parties."></i></div>
         <div class="e-calc__helper-row">
           <!-- input-->
           <div class="e-calc__input e-calc__input--contact">
@@ -323,5 +352,6 @@
   <script src="components/tether/dist/js/tether.min.js"></script>
   <script src="js/libs/jquery.bs-tooltip.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/validator.js"></script>
   <!--endbuild-->
 </body>

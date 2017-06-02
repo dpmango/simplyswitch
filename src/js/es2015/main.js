@@ -49,6 +49,23 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
+  $('.js-toggleLogos').on('click', function(){
+    var toggleLabel = $(this).find('label span');
+    var toggableObjects = $(this).parent().find('.e-calc__checkbox--toggable');
+
+    if (toggleLabel.text() == 'Show more'){
+      toggleLabel.text('Show less')
+      $(this).addClass('active');
+      toggableObjects.addClass('visible');
+    } else {
+      toggleLabel.text('Show more')
+      $(this).removeClass('active');
+      toggableObjects.removeClass('visible');
+    }
+
+
+  });
+
   /////
   // UI
   /////

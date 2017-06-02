@@ -66,3 +66,13 @@
   &-tooltip
     background-image: svg-load('../../images/svg/tooltip.svg')
     size: 22px
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    &:hover
+      filter: contrast(1.5)
+  &-showmore
+    background-image: svg-load('../../images/svg/showmore.svg')
+    size: 40px
+  &-arrow
+    background-image: svg-load('../../images/svg/arrow.svg', fill=tomato)
+    size: 25px 20px

@@ -20,6 +20,9 @@
         <div class="e-calc__promo__text">Avarage SimplySwitch consumer <span>Save £390</span> or more yearly *<br> Current combined spend for gas and electricity are between £84 and £6869. <span>Get quote now</span> by answering questions below</div>
       </div>
     </div>
+    <div class="e-calc__steps">
+      <div class="e-calc__steps__box"><a class="e-calc__step" href="index.html" data-step="1">Location</a><a class="e-calc__step active" href="#" data-step="2">Current use</a><a class="e-calc__step" href="step3.html" data-step="3">Compare</a><a class="e-calc__step" href="step4.html" data-step="4">Apply</a></div>
+    </div>
     <div class="container">
       <!-- question-->
       <div class="e-calc__question">
@@ -41,7 +44,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Are your Gas & Electricity tariffs with the same supplier?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="Выживший &lt;br&gt; Вы не смогли помочь заражённым, но покинули город и остались в живых."></i></div>
+        <div class="e-calc__heading">- Are your Gas & Electricity tariffs with the same supplier?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If your gas and electricity are on the same plan and from the same supplier please select ‘Yes’"></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_2" id="question_2_1" checked>
@@ -56,7 +59,7 @@
       <!-- question-->
       <div class="e-calc__question">
         <div class="e-calc__heading">- Please tell us your gas and electricity supplier</div>
-        <div class="e-calc__checkboxes">
+        <div class="e-calc__checkboxes e-calc__checkboxes--hasmany">
           <div class="e-calc__checkbox e-calc__checkbox--vertical">
             <input type="radio" name="question_3" id="question_3_1">
             <label for="question_3_1"><img src="images/logos/bgas.png" srcset="images/logos/bgas@2x.png 2x"><span>British Gas</span></label>
@@ -81,11 +84,40 @@
             <input type="radio" name="question_3" id="question_3_6">
             <label for="question_3_6"><img src="images/logos/sse.png" srcset="images/logos/sse@2x.png 2x"><span>SSE</span></label>
           </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical js-toggleLogos">
+            <label for="question_3_7"><i class="icon icon-showmore"></i><span>Show more</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_1">
+            <label for="question_3_1"><img src="images/logos/bgas.png" srcset="images/logos/bgas@2x.png 2x"><span>British Gas</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_2">
+            <label for="question_3_2"><img src="images/logos/eon.png" srcset="images/logos/eon@2x.png 2x"><span>E.ON</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_3">
+            <label for="question_3_3"><img src="images/logos/edf.png" srcset="images/logos/edf@2x.png 2x"><span>EDF Energy</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_4">
+            <label for="question_3_4"><img src="images/logos/npower.png" srcset="images/logos/npower@2x.png 2x"><span>NPower</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_5">
+            <label for="question_3_5"><img src="images/logos/spower.png" srcset="images/logos/spower@2x.png 2x"><span>ScottishPower</span></label>
+          </div>
+          <div class="e-calc__checkbox e-calc__checkbox--vertical e-calc__checkbox--toggable">
+            <input type="radio" name="question_3" id="question_3_6">
+            <label for="question_3_6"><img src="images/logos/sse.png" srcset="images/logos/sse@2x.png 2x"><span>SSE</span></label>
+          </div>
         </div>
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- How do you pay your electricity bills?</div>
+        <div class="e-calc__heading">- How do you pay your electricity bills?<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="top" data-html="true" title="If the amount you pay is automatically taken from your bank account each month; please select &lt;span&gt;'Monthly Direct Debit'&lt;/span&gt;. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'."></i>
+          <div class="e-calc__validation"> <i class="icon icon-arrow"></i><span>Please select to continue</span></div>
+        </div>
         <div class="e-calc__helper-row">
           <div class="e-calc__checkboxes e-calc__checkboxes--vertical">
             <div class="e-calc__checkbox">
@@ -105,7 +137,7 @@
               <label for="question_4_4"><span>Payment on receipts of Bill    </span></label>
             </div>
           </div>
-          <div class="e-calc__helper"> 
+          <div class="e-calc__helper">
             <p>If the amount you pay is automatically taken from your bank account each month; please select <span>'Monthly Direct Debit'</span>. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'.</p>
           </div>
         </div>
@@ -126,7 +158,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Does your current tariff include an Economy 7 deal?</div>
+        <div class="e-calc__heading">- Does your current tariff include an Economy 7 deal?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If you're unsure as to whether or not you have Economy 7, take a look at your electricity bill. If you have two different rates, one for night and one for day, then you have Economy 7."></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_6" id="question_6_1">
@@ -160,7 +192,7 @@
     <div class="container">
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- How much Gas you currently use?</div>
+        <div class="e-calc__heading">- How much Gas you currently use?<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="top" data-html="true" title="KWH will give you the most accurate quotation. These details can be found on your latest bill. "></i></div>
         <div class="e-calc__helper-row">
           <div class="e-calc__group">
             <!-- input-->
@@ -186,7 +218,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- How much Electrisity you currently use?</div>
+        <div class="e-calc__heading">- How much Electrisity you currently use?<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="top" data-html="true" title="If the amount you pay is automatically taken from your bank account each month; please select &lt;span&gt;'Monthly Direct Debit'&lt;/span&gt;. If a bill is sent to you then please select 'Pay on receipt of bill. Choose the 'Prepayment' option if you make payments in advance using a Smart Card. If none of the above apply, please select 'More method payments'."></i></div>
         <div class="e-calc__helper-row">
           <div class="e-calc__group">
             <!-- input-->
@@ -207,11 +239,12 @@
               </div>
             </div>
           </div>
+          <div class="e-calc__helper e-calc__helper--narrow">KWH will give you the most accurate quotation. These details can be found on your latest bill. </div>
         </div>
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- How would you like to pay your new bill?</div>
+        <div class="e-calc__heading">- How would you like to pay your new bill?<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="top" data-html="true" title="KWH will give you the most accurate quotation. These details can be found on your latest bill. "></i></div>
         <div class="e-calc__helper-row">
           <div class="e-calc__checkboxes e-calc__checkboxes--vertical">
             <div class="e-calc__checkbox">
@@ -246,7 +279,7 @@
     <div class="container">
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Email address:</div>
+        <div class="e-calc__heading">- Email address:<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="right" data-html="true" title="So we can send you details of your switch."></i></div>
         <div class="e-calc__helper-row">
           <!-- input-->
           <div class="e-calc__input e-calc__input--contact">
@@ -257,7 +290,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Phone number:</div>
+        <div class="e-calc__heading">- Phone number:<i class="icon icon-tooltip icon-tooltip--tablet" data-toggle="tooltip" data-placement="right" data-html="true" title="If for any reason you can't complete your comparison, we will be able to call you back and help. We will never sell your details to third parties."></i></div>
         <div class="e-calc__helper-row">
           <!-- input-->
           <div class="e-calc__input e-calc__input--contact">
@@ -301,12 +334,9 @@
     <!-- Progress indicator-->
     <div class="e-calc__progress">
       <div class="container">
-        <div class="e-calc__progress__counter">2 / 10 answered</div>
+        <div class="e-calc__progress__counter"><span class='js-eCalcAnswered'>2</span> / 10 <span class='e-calc__progress__counter__tablet'>answered</span></div>
         <div class="e-calc__progress__actions"><a href="#sectionTop"><i class="icon icon-up"></i></a><a class="e-calc__btn e-calc__btn--progress disabled js-toggleStep" href="step2.html">See Results</a></div>
       </div>
-    </div>
-    <div class="e-calc__steps">
-      <div class="e-calc__steps__box"><a class="e-calc__step" href="index.html" data-step="1">Location</a><a class="e-calc__step active" href="#" data-step="2">Current use</a><a class="e-calc__step" href="step3.html" data-step="3">Compare</a><a class="e-calc__step" href="step4.html" data-step="4">Apply</a></div>
     </div>
   </div>
   <!-- SCRIPTS-->

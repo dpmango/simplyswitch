@@ -22,7 +22,7 @@ doctype html
       .container
         .e-calc__final
           // card
-          .e-calc__results__card
+          .e-calc__results__card.active
             .e-calc__results__card__left
               .e-calc__results__card__name
                 img(src='images/logos/bgas.png' srcset='images/logos/bgas@2x.png 2x')
@@ -42,7 +42,7 @@ doctype html
               .e-calc__results__card__cta
                 a(href='#').e-calc__btn.e-calc__btn--primary Apply Now
                 a(href='#').js-eCalcBreakdownToggle.e-calc__results__card__cta__more 
-                  span calculation breakdown
+                  span hide breakdown
             .e-calc__results__card__hidden
               .scrollbar-dynamic
                 table(cellspacing='0')

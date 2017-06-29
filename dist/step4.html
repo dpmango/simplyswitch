@@ -14,12 +14,16 @@
 <body>
   <!-- HEADER::START-->
   <div class="e-calc">
+    <div class="e-calc__steps">
+      <div class="e-calc__steps__box"><a class="e-calc__step" href="index.html" data-step="1">Location</a><a class="e-calc__step" href="step2.html" data-step="2">Current use</a><a class="e-calc__step" href="step3.html" data-step="3">Compare</a><a class="e-calc__step active" href="#" data-step="4">Apply</a></div>
+    </div>
     <div class="container text-center">
       <div class="e-calc__heading e-calc__heading--huge">You have chosen Blue+Fixed Prepay June 2018</div>
     </div>
     <div class="container">
       <div class="e-calc__final">
-        <div class="e-calc__results__card">
+        <!-- card-->
+        <div class="e-calc__results__card active">
           <div class="e-calc__results__card__left">
             <div class="e-calc__results__card__name"><img src="images/logos/bgas.png" srcset="images/logos/bgas@2x.png 2x"><span>Bristol Energy Standard Prepayment</span></div>
             <div class="e-calc__results__card__left-bottom">
@@ -33,7 +37,106 @@
             <div class="e-calc__results__card__prediction"><span>You will save</span>
               <div class="e-calc__results__card__prediction__num">£914.11 </div>
             </div>
-            <div class="e-calc__results__card__cta"><a class="e-calc__btn e-calc__btn--primary" href="#">Apply Now</a><a class="js-eCalcBreakdownToggle e-calc__results__card__cta__more" href="#"> <span>calculation breakdown</span></a></div>
+            <div class="e-calc__results__card__cta"><a class="e-calc__btn e-calc__btn--primary" href="#">Apply Now</a><a class="js-eCalcBreakdownToggle e-calc__results__card__cta__more" href="#"> <span>hide breakdown</span></a></div>
+          </div>
+          <div class="e-calc__results__card__hidden">
+            <div class="scrollbar-dynamic">
+              <table cellspacing="0">
+                <thead>
+                  <tr> 
+                    <td>Electricity</td>
+                    <td>Current tariff</td>
+                    <td>New tariff</td>
+                    <td>Savings</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <td>Standing charge</td>
+                    <td>15.82p / day</td>
+                    <td>21.93p / day</td>
+                    <td class="js-eCalcValueToggable">- £ 37.76</td>
+                  </tr>
+                  <tr> 
+                    <td>Unit Rate</td>
+                    <td>17.30p / kW/h</td>
+                    <td>11.22p / kW/h</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td>Projected consumption on <b><i>6,600 kWh</i></b></td>
+                    <td>312.89p / day</td>
+                    <td>202.96p / day</td>
+                    <td class="js-eCalcValueToggable">+ £ 299.82</td>
+                  </tr>
+                  <tr> 
+                    <td>Discount and additional charges</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td> <b>Total Consumption</b></td>
+                    <td class="js-eCalcValueToggable">£1199.82</td>
+                    <td class="js-eCalcValueToggable">£794.63</td>
+                    <td class="js-eCalcValueToggable">+ £ 259.82</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- next table -->
+              <table cellspacing="0">
+                <thead>
+                  <tr> 
+                    <td>Gas</td>
+                    <td>Current tariff</td>
+                    <td>New tariff</td>
+                    <td>Savings</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <td>Standing charge</td>
+                    <td>15.82p / day</td>
+                    <td>20.42p / day</td>
+                    <td class="js-eCalcValueToggable">- £ 37.76</td>
+                  </tr>
+                  <tr> 
+                    <td>Unit Rate</td>
+                    <td>4.36p / kW/h</td>
+                    <td>2.80p / kW/h</td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td>Projected consumption on <b><i>4,600 kWh</i></b></td>
+                    <td>49.99p / day</td>
+                    <td>32.17p / day</td>
+                    <td class="js-eCalcValueToggable">+ £ 299.82</td>
+                  </tr>
+                  <tr> 
+                    <td>Discount and additional charges</td>
+                    <td>N/A</td>
+                    <td>Dual Fuel Discount </td>
+                    <td> </td>
+                  </tr>
+                  <tr> 
+                    <td> <b>Total Consumption</b></td>
+                    <td class="js-eCalcValueToggable">£ 240.20</td>
+                    <td class="js-eCalcValueToggable"> £ 165.70</td>
+                    <td class="js-eCalcValueToggable">+ £ 75.82</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="e-calc__results__card__hidden__bottom">
+              <div class="e-calc__toggler right js-eCalcValueToggle">
+                <div class="e-calc__toggler__text">Monthly</div>
+                <div class="e-calc__toggler__box">
+                  <input type="hidden" value="">
+                </div>
+                <div class="e-calc__toggler__text">Yerly</div>
+              </div>
+              <div class="e-calc__results__card__hidden__bottom-terms"><a href="#">terms and defenitions</a></div>
+            </div>
           </div>
         </div>
         <div class="e-calc__tip text-center">To complete your switch EDF Energy need some details to set up your account.</div>
@@ -49,6 +152,18 @@
       <!-- question-->
       <div class="e-calc__question">
         <div class="e-calc__heading">- How long have you lived at this address?</div>
+        <div class="e-calc__group e-calc__group--lived">
+          <div class="e-calc__input e-calc__input--number">
+            <label>YEARS</label>
+            <input type="text" placeholder="0" maxlength="2"><i class="icon icon-minus"></i><i class="icon icon-plus"></i>
+          </div>
+          <div class="e-calc__group__sep">and</div>
+          <div class="e-calc__input e-calc__input--number">
+            <label>MONTHS</label>
+            <input type="text" placeholder="0" maxlength="2"><i class="icon icon-minus"></i><i class="icon icon-plus"></i>
+          </div>
+          <div class="e-calc__lived">Your address is<span>49, ELM WALK, LONDON, SW20 9EE</span></div>
+        </div>
       </div>
       <!-- question-->
       <div class="e-calc__question">
@@ -104,7 +219,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Do you have a smart meter for your electricity supply?</div>
+        <div class="e-calc__heading">- Do you have a smart meter for your electricity supply?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If you currently have a smart meter you may lose functionality by changing your supplier."></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_5" id="question_5_1">
@@ -118,7 +233,7 @@
       </div>
       <!-- question-->
       <div class="e-calc__question">
-        <div class="e-calc__heading">- Do you have a smart meter for your gas supply?</div>
+        <div class="e-calc__heading">- Do you have a smart meter for your gas supply?<i class="icon icon-tooltip" data-toggle="tooltip" data-placement="top" data-html="true" title="If you currently have a smart meter you may lose functionality by changing your supplier."></i></div>
         <div class="e-calc__checkboxes">
           <div class="e-calc__checkbox e-calc__checkbox--yesno">
             <input type="radio" name="question_6" id="question_6_1">
@@ -231,13 +346,9 @@
     <!-- Progress indicator-->
     <div class="e-calc__progress">
       <div class="container">
-        <div class="e-calc__progress__counter">2 / 10 answered</div>
+        <div class="e-calc__progress__counter"><span class='js-eCalcAnswered'>2</span> / 10 <span class='e-calc__progress__counter__tablet'>answered</span></div>
         <div class="e-calc__progress__actions"><a href="#sectionTop"><i class="icon icon-up"></i></a><a class="e-calc__btn e-calc__btn--progress disabled js-toggleStep" href="step2.html">Confirm my switch</a></div>
       </div>
-    </div>
-    <!-- STEPS                            -->
-    <div class="e-calc__steps">
-      <div class="e-calc__steps__box"><a class="e-calc__step" href="index.html" data-step="1">Location</a><a class="e-calc__step" href="step2.html" data-step="2">Current use</a><a class="e-calc__step" href="step3.html" data-step="3">Compare</a><a class="e-calc__step active" href="#" data-step="4">Apply</a></div>
     </div>
   </div>
   <!-- SCRIPTS-->
